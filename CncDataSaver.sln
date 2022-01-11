@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CncDataSaver.BL", "CncDataSaver.BL\CncDataSaver.BL.csproj", "{7E747B18-83FD-4A38-B2A9-564D0DB51C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CncDataSave.UI", "CncDataSave.UI\CncDataSave.UI.csproj", "{EB9637BB-0397-478E-8A6A-16C86F0328CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E747B18-83FD-4A38-B2A9-564D0DB51C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E747B18-83FD-4A38-B2A9-564D0DB51C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E747B18-83FD-4A38-B2A9-564D0DB51C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E747B18-83FD-4A38-B2A9-564D0DB51C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB9637BB-0397-478E-8A6A-16C86F0328CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9637BB-0397-478E-8A6A-16C86F0328CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9637BB-0397-478E-8A6A-16C86F0328CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9637BB-0397-478E-8A6A-16C86F0328CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13199E65-00D3-453E-AE2C-623F517E96D2}
+	EndGlobalSection
+EndGlobal
