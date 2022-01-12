@@ -16,6 +16,6 @@ namespace CncDataSaver.BL.Model
         public DbSet<Macro> Macros { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Offset> Offsets { get; set; }
+        public DbSet<OffsetData> OffsetData { get; set; }
     }
 }

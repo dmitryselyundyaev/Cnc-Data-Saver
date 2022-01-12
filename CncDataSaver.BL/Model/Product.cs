@@ -9,9 +9,9 @@ namespace CncDataSaver.BL.Model
     public class Product
     {
         public int ProductId { get; set; }
-        public virtual ICollection<Offset> Offsets { get; set; }
+        public virtual ICollection<OffsetData> Offsets { get; set; }
         public int Diameter { get; set; }
-        public int ThreadType { get; set; }
+        public string ThreadType { get; set; }
 
         public override string ToString()
         {

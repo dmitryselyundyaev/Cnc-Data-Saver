@@ -56,7 +56,7 @@
     <Compile Include="Model\Ch2.cs" />
     <Compile Include="Model\CncDataSaverContext.cs" />
     <Compile Include="Model\Macro.cs" />
-    <Compile Include="Model\Offset.cs" />
+    <Compile Include="Model\OffsetData.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

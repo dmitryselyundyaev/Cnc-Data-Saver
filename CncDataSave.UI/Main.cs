@@ -28,8 +28,9 @@ namespace CncDataSave.UI
 
         private void добавитьОффсетToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var CreateOffset = new CreateOffset<User>(db.Users,db);
+            var CreateOffset = new CreateOffset<OffsetData>(db.OffsetData,db);
             CreateOffset.Show();
+            
         }
 
         private void операцииToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,5 +52,6 @@ namespace CncDataSave.UI
         {
             db.SaveChanges();
         }
+
     }
 }
