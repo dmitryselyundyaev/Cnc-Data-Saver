@@ -52,8 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\Ch1.cs" />
-    <Compile Include="Model\Ch2.cs" />
+    <Compile Include="Model\Channel1.cs" />
+    <Compile Include="Model\Channel2.cs" />
     <Compile Include="Model\CncDataSaverContext.cs" />
     <Compile Include="Model\Macro.cs" />
     <Compile Include="Model\OffsetData.cs" />

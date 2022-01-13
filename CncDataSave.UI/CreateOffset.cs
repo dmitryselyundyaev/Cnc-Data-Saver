@@ -81,7 +81,7 @@ namespace CncDataSave.UI
                     db.SaveChanges();
                 }
 
-                var addedCh1 = new Ch1();
+                var addedCh1 = new Channel1();
                 addedCh1.X1 = Convert.ToDouble(maskedTextBoxX1.Text);
                 addedCh1.Z1 = Convert.ToDouble(maskedTextBoxZ1.Text);
                 addedCh1.X2 = Convert.ToDouble(maskedTextBoxX2.Text);
@@ -100,7 +100,7 @@ namespace CncDataSave.UI
                 addedCh1.Y2 = Convert.ToDouble(maskedTextBoxY2.Text);
                 addedCh1.Y3 = Convert.ToDouble(maskedTextBoxY3.Text);
                 addedCh1.Y4 = Convert.ToDouble(maskedTextBoxY4.Text);
-                var addedCh2 = new Ch2();
+                var addedCh2 = new Channel2();
                 addedCh2.X1 = Convert.ToDouble(maskedTextBoxCH2X1.Text);
                 addedCh2.Z1 = Convert.ToDouble(maskedTextBoxCH2Z1.Text);
                 addedCh2.X2 = Convert.ToDouble(maskedTextBoxCH2X2.Text);
@@ -132,16 +132,17 @@ namespace CncDataSave.UI
                 addedGeometry.Diameter = Convert.ToInt32(comboBoxProductDiameter.Text);
                 addedGeometry.ThreadType = comboBoxThreadType.Text;
                 db.Products.Add(addedGeometry);
-                db.Ch1.Add(addedCh1);
-                db.Ch2.Add(addedCh2);
+                db.Channel1.Add(addedCh1);
+                db.Channel2.Add(addedCh2);
                 db.Macros.Add(addedOffset);
                 var offsetAdd = new OffsetData();
-                offsetAdd.Ch1 = addedCh1;
-                offsetAdd.Ch2 = addedCh2;
+                offsetAdd.Channel1 = addedCh1;
+                offsetAdd.Channel2 = addedCh2;
                 offsetAdd.Macro = addedOffset;
                 offsetAdd.Product = addedGeometry;
                 offsetAdd.UserId = currentUser.UserId;
                 offsetAdd.Machine = comboBoxMachineNumber.Text;
+                offsetAdd.Created = DateTime.Now;
                 db.OffsetData.Add(offsetAdd);
                 db.SaveChanges();
             }

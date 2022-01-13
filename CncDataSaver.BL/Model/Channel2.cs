@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CncDataSaver.BL.Model
 {
-    public class Ch2
+    public class Channel2
     {
-        public int Ch2Id { get; set; }
+        public int Channel2Id { get; set; }
         public virtual ICollection<OffsetData> Offsets { get; set; }
         public double? X1 { get; set; }
         public double? Z1 { get; set; }

@@ -16,5 +16,11 @@ namespace CncDataSaver.BL.Model
         public double? ThreadPass { get; set; } 
         public double? OdSeal { get; set; }
         public double? Standoff { get; set; }
+
+
+        public override string ToString()
+        {
+            return $"Data saved";
+        }
     }
 }

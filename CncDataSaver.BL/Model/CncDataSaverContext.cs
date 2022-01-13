@@ -11,8 +11,8 @@ namespace CncDataSaver.BL.Model
     {
         public CncDataSaverContext() : base("DataSaverConncection") { }
 
-        public DbSet<Ch1> Ch1 { get; set; }
-        public DbSet<Ch2> Ch2 { get; set; }
+        public DbSet<Channel1> Channel1 { get; set; }
+        public DbSet<Channel2> Channel2 { get; set; }
         public DbSet<Macro> Macros { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Product> Products { get; set; }
