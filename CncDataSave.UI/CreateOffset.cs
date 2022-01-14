@@ -142,7 +142,7 @@ namespace CncDataSave.UI
                 offsetAdd.Product = addedGeometry;
                 offsetAdd.UserId = currentUser.UserId;
                 offsetAdd.Machine = comboBoxMachineNumber.Text;
-                offsetAdd.Created = DateTime.Now;
+                offsetAdd.Created = DateTime.Now.Date;
                 db.OffsetData.Add(offsetAdd);
                 db.SaveChanges();
             }

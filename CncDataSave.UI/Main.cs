@@ -53,5 +53,10 @@ namespace CncDataSave.UI
             db.SaveChanges();
         }
 
+        private void посмотретьОффсетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var ViewOffset = new ViewOffset<OffsetData>(db.OffsetData, db);
+            ViewOffset.Show();
+        }
     }
 }

@@ -92,6 +92,7 @@ namespace CncDataSave.UI
             this.посмотретьОффсетToolStripMenuItem.Name = "посмотретьОффсетToolStripMenuItem";
             this.посмотретьОффсетToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
             this.посмотретьОффсетToolStripMenuItem.Text = "Посмотреть оффсет";
+            this.посмотретьОффсетToolStripMenuItem.Click += new System.EventHandler(this.посмотретьОффсетToolStripMenuItem_Click);
             // 
             // проверитьСостояниеОсейToolStripMenuItem
             // 

@@ -63,6 +63,12 @@
     <Compile Include="CreateOffset.Designer.cs">
       <DependentUpon>CreateOffset.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewOffset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOffset.Designer.cs">
+      <DependentUpon>ViewOffset.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreateOffset.resx">
       <DependentUpon>CreateOffset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOffset.resx">
+      <DependentUpon>ViewOffset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
