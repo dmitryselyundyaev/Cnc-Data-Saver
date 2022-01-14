@@ -149,6 +149,16 @@ namespace CncDataSave.UI
                             .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                     }
+                    else
+                    {
+                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
+                        var source = db.OffsetData
+                            .Where(u=> u.Product.ThreadType == comboBoxThreadTypeView.Text)
+                            .Where(u => u.Machine == comboBoxMachineNumberView.Text)
+                            .Where(u => u.Product.Diameter == convertedDiameter)
+                            .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date).ToList();
+                        listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
+                    }
 
                 }
             }
