@@ -20,7 +20,7 @@ namespace CncDataSaver.BL.Model
 
         public override string ToString()
         {
-            return $"Data saved";
+            return $"";
         }
     }
 }

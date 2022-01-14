@@ -27,7 +27,7 @@ namespace CncDataSaver.BL.Model
 
         public override string ToString()
         {
-            return $"X1= {X1} Z1= {Z1}";
+            return $"";
         }
     }
 }

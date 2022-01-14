@@ -13,7 +13,7 @@ namespace CncDataSaver.BL.Model
         public virtual ICollection<OffsetData> Offsets { get; set; }
         public override string ToString()
         {
-            return $"ID:{UserId} Имя:{UserName}";
+            return $"{UserName}";
         }
     }
 }

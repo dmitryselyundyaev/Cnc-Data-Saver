@@ -30,7 +30,7 @@ namespace CncDataSaver.BL.Model
         public double? Y4 { get; set; }
         public override string ToString()
         {
-            return $"X1= {X1} Z1= {Z1} Y1={Y1}";
+            return $"";
         }
     }
 }
