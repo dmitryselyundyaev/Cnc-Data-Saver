@@ -24,7 +24,7 @@ namespace CncDataSaver.BL.Model
 
         public override string ToString()
         {
-            return $"{OffsetDataId} Станок:{Machine} Сортамент:{Product.ThreadType}/{Product.Diameter} Дата создания:{Created} ";
+            return $"{OffsetDataId} Станок:{Machine} Сортамент:{Product.ThreadType}/{Product.Diameter} ";
         }
     }
 }

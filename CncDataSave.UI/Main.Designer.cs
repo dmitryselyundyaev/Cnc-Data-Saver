@@ -30,9 +30,9 @@ namespace CncDataSave.UI
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.операцииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьОффсетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.посмотретьОффсетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OperationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CreateOffsetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OffsetViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проверитьСостояниеОсейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +50,7 @@ namespace CncDataSave.UI
             this.бАТРЕССToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вспомогательныеПрограммыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.panelMainChild = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,42 +58,42 @@ namespace CncDataSave.UI
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.операцииToolStripMenuItem,
+            this.OperationsToolStripMenuItem,
             this.помощьToolStripMenuItem,
             this.режимыИСкоростиРезанияToolStripMenuItem,
             this.исходныеПрограммыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1585, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1578, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // операцииToolStripMenuItem
+            // OperationsToolStripMenuItem
             // 
-            this.операцииToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьОффсетToolStripMenuItem,
-            this.посмотретьОффсетToolStripMenuItem,
+            this.OperationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CreateOffsetToolStripMenuItem,
+            this.OffsetViewToolStripMenuItem,
             this.проверитьСостояниеОсейToolStripMenuItem,
             this.выходToolStripMenuItem});
-            this.операцииToolStripMenuItem.Name = "операцииToolStripMenuItem";
-            this.операцииToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
-            this.операцииToolStripMenuItem.Text = "Операции";
-            this.операцииToolStripMenuItem.Click += new System.EventHandler(this.операцииToolStripMenuItem_Click);
+            this.OperationsToolStripMenuItem.Name = "OperationsToolStripMenuItem";
+            this.OperationsToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.OperationsToolStripMenuItem.Text = "Операции";
+            this.OperationsToolStripMenuItem.Click += new System.EventHandler(this.операцииToolStripMenuItem_Click);
             // 
-            // добавитьОффсетToolStripMenuItem
+            // CreateOffsetToolStripMenuItem
             // 
-            this.добавитьОффсетToolStripMenuItem.Name = "добавитьОффсетToolStripMenuItem";
-            this.добавитьОффсетToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
-            this.добавитьОффсетToolStripMenuItem.Text = "Добавить оффсет";
-            this.добавитьОффсетToolStripMenuItem.Click += new System.EventHandler(this.добавитьОффсетToolStripMenuItem_Click);
+            this.CreateOffsetToolStripMenuItem.Name = "CreateOffsetToolStripMenuItem";
+            this.CreateOffsetToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.CreateOffsetToolStripMenuItem.Text = "Добавить оффсет";
+            this.CreateOffsetToolStripMenuItem.Click += new System.EventHandler(this.CreateOffsetToolStripMenuItem_Click);
             // 
-            // посмотретьОффсетToolStripMenuItem
+            // OffsetViewToolStripMenuItem
             // 
-            this.посмотретьОффсетToolStripMenuItem.Name = "посмотретьОффсетToolStripMenuItem";
-            this.посмотретьОффсетToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
-            this.посмотретьОффсетToolStripMenuItem.Text = "Посмотреть оффсет";
-            this.посмотретьОффсетToolStripMenuItem.Click += new System.EventHandler(this.посмотретьОффсетToolStripMenuItem_Click);
+            this.OffsetViewToolStripMenuItem.Name = "OffsetViewToolStripMenuItem";
+            this.OffsetViewToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.OffsetViewToolStripMenuItem.Text = "Посмотреть оффсет";
+            this.OffsetViewToolStripMenuItem.Click += new System.EventHandler(this.OffsetViewToolStripMenuItem_Click);
             // 
             // проверитьСостояниеОсейToolStripMenuItem
             // 
@@ -204,14 +205,27 @@ namespace CncDataSave.UI
             this.вспомогательныеПрограммыToolStripMenuItem.Size = new System.Drawing.Size(305, 26);
             this.вспомогательныеПрограммыToolStripMenuItem.Text = "Вспомогательные программы";
             // 
+            // panelMainChild
+            // 
+            this.panelMainChild.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelMainChild.Location = new System.Drawing.Point(0, 30);
+            this.panelMainChild.Name = "panelMainChild";
+            this.panelMainChild.Size = new System.Drawing.Size(1578, 820);
+            this.panelMainChild.TabIndex = 1;
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1585, 881);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1578, 849);
+            this.Controls.Add(this.panelMainChild);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -224,9 +238,9 @@ namespace CncDataSave.UI
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem операцииToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem добавитьОффсетToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem посмотретьОффсетToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OperationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CreateOffsetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OffsetViewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem проверитьСостояниеОсейToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem помощьToolStripMenuItem;
@@ -244,6 +258,7 @@ namespace CncDataSave.UI
         private System.Windows.Forms.ToolStripMenuItem бАТРЕССToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вспомогательныеПрограммыToolStripMenuItem;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Panel panelMainChild;
     }
 }
 

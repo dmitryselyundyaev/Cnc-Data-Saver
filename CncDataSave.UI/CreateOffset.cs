@@ -27,7 +27,7 @@ namespace CncDataSave.UI
             this.db = db;
             this.set = set;
             set.Load();
-            dataGridView1.DataSource = set.Local.ToBindingList();
+
         }
 
         private void CreateOffset_Load(object sender, EventArgs e)
@@ -56,9 +56,15 @@ namespace CncDataSave.UI
         {
 
         }
-
+        /// <summary>
+        /// Button to save offset to data base.
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveOffsetToDB_Click_1(object sender, EventArgs e)
         {
+            labelIsSaved.Hide();
             if (string.IsNullOrEmpty(comboBoxThreadType.Text) || string.IsNullOrEmpty(comboBoxProductDiameter.Text) || string.IsNullOrEmpty(comboBoxMachineNumber.Text))
             {
                 MessageBox.Show("Заполните параметры сортамента", "Ошибка заполнения данных",
@@ -142,9 +148,10 @@ namespace CncDataSave.UI
                 offsetAdd.Product = addedGeometry;
                 offsetAdd.UserId = currentUser.UserId;
                 offsetAdd.Machine = comboBoxMachineNumber.Text;
-                offsetAdd.Created = DateTime.Now.Date;
+                offsetAdd.Created = DateTime.Now;
                 db.OffsetData.Add(offsetAdd);
                 db.SaveChanges();
+                labelIsSaved.Show();
             }
             
         }

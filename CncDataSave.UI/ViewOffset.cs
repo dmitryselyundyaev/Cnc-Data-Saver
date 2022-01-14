@@ -36,17 +36,18 @@ namespace CncDataSave.UI
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private void SearchButton_Click(object sender, EventArgs e)
         {
             if (checkBoxProductBlank.Checked)
             {
+                
                 if (checkBoxPickAllTime.Checked)
                 {
                     listBoxViewDataList.DataSource = set.Local.ToBindingList();
                 }
                 else
                 {
-                    var source = db.OffsetData.Where(u => u.Created == dateTimePickerForView.Value.Date).ToList();
+                    var source = db.OffsetData.Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date).ToList();
                     listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                 }
 
@@ -105,7 +106,7 @@ namespace CncDataSave.UI
                     {
                         var source = db.OffsetData
                             .Where(u => u.Product.ThreadType == comboBoxThreadTypeView.Text)
-                            .Where(u => u.Created == dateTimePickerForView.Value.Date).ToList();
+                            .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                     }
                     else if (string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && !string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
@@ -113,14 +114,14 @@ namespace CncDataSave.UI
                         var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData
                             .Where(u => u.Product.Diameter == convertedDiameter)
-                            .Where(u => u.Created == dateTimePickerForView.Value.Date).ToList();
+                            .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                     }
                     else if (string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && !string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
                     {
                         var source = db.OffsetData
                             .Where(u => u.Machine == comboBoxMachineNumberView.Text)
-                            .Where(u => u.Created == dateTimePickerForView.Value.Date).ToList();
+                            .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                     }
                     else if (!string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && !string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
@@ -128,7 +129,7 @@ namespace CncDataSave.UI
                         var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData.Where(u => u.Product.Diameter == convertedDiameter)
                             .Where(u => u.Product.ThreadType == comboBoxThreadTypeView.Text)
-                            .Where(u => u.Created == dateTimePickerForView.Value.Date).ToList();
+                            .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                     }
                     else if (!string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && !string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
@@ -136,7 +137,7 @@ namespace CncDataSave.UI
                         var source = db.OffsetData
                             .Where(u => u.Machine == comboBoxMachineNumberView.Text)
                             .Where(u => u.Product.ThreadType == comboBoxThreadTypeView.Text)
-                            .Where(u => u.Created == dateTimePickerForView.Value.Date).ToList();
+                            .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                     }
                     else if (string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && !string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && !string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
@@ -145,7 +146,7 @@ namespace CncDataSave.UI
                         var source = db.OffsetData
                             .Where(u => u.Machine == comboBoxMachineNumberView.Text)
                             .Where(u => u.Product.Diameter == convertedDiameter)
-                            .Where(u => u.Created == dateTimePickerForView.Value.Date).ToList();
+                            .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                     }
 
@@ -165,7 +166,7 @@ namespace CncDataSave.UI
             OffsetData selectedOffset = (OffsetData)listBoxViewDataList.SelectedItem;
             textBoxOffsetName.Text = selectedOffset.ToString();
             textBoxCreatedBy.Text = selectedOffset.User.ToString();
-            textBoxCreationDate.Text = selectedOffset.Created.Date.ToString();
+            textBoxCreationDate.Text = selectedOffset.Created.ToString();
             textBoxMachineView.Text = selectedOffset.Machine;
             textBoxDiameterView.Text = selectedOffset.Product.Diameter.ToString();
             textBoxThreadTypeView.Text = selectedOffset.Product.ThreadType;

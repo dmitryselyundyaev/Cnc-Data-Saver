@@ -29,7 +29,6 @@ namespace CncDataSave.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBoxThreadType = new System.Windows.Forms.ComboBox();
             this.comboBoxProductDiameter = new System.Windows.Forms.ComboBox();
             this.SaveOffsetToDB = new System.Windows.Forms.Button();
@@ -108,24 +107,15 @@ namespace CncDataSave.UI
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.labelIsSaved = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 634);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1579, 265);
-            this.dataGridView1.TabIndex = 2;
             // 
             // comboBoxThreadType
             // 
             this.comboBoxThreadType.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxThreadType.FormattingEnabled = true;
             this.comboBoxThreadType.Items.AddRange(new object[] {
+            "",
             "ОТТМ",
             "ОТТГ",
             "ВМЗ-1",
@@ -142,6 +132,7 @@ namespace CncDataSave.UI
             this.comboBoxProductDiameter.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxProductDiameter.FormattingEnabled = true;
             this.comboBoxProductDiameter.Items.AddRange(new object[] {
+            "",
             "245",
             "168",
             "324",
@@ -154,7 +145,7 @@ namespace CncDataSave.UI
             // SaveOffsetToDB
             // 
             this.SaveOffsetToDB.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.SaveOffsetToDB.Location = new System.Drawing.Point(632, 541);
+            this.SaveOffsetToDB.Location = new System.Drawing.Point(632, 533);
             this.SaveOffsetToDB.Name = "SaveOffsetToDB";
             this.SaveOffsetToDB.Size = new System.Drawing.Size(298, 70);
             this.SaveOffsetToDB.TabIndex = 45;
@@ -168,7 +159,7 @@ namespace CncDataSave.UI
             this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label1.Location = new System.Drawing.Point(597, 52);
+            this.label1.Location = new System.Drawing.Point(554, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(418, 55);
             this.label1.TabIndex = 46;
@@ -216,6 +207,7 @@ namespace CncDataSave.UI
             this.comboBoxMachineNumber.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxMachineNumber.FormattingEnabled = true;
             this.comboBoxMachineNumber.Items.AddRange(new object[] {
+            "",
             "РНС 1",
             "РНС 2"});
             this.comboBoxMachineNumber.Location = new System.Drawing.Point(1226, 320);
@@ -1033,10 +1025,24 @@ namespace CncDataSave.UI
             this.label22.TabIndex = 128;
             this.label22.Text = "Сортамент";
             // 
+            // labelIsSaved
+            // 
+            this.labelIsSaved.AutoSize = true;
+            this.labelIsSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
+            this.labelIsSaved.ForeColor = System.Drawing.Color.Red;
+            this.labelIsSaved.Location = new System.Drawing.Point(679, 505);
+            this.labelIsSaved.Name = "labelIsSaved";
+            this.labelIsSaved.Size = new System.Drawing.Size(215, 25);
+            this.labelIsSaved.TabIndex = 129;
+            this.labelIsSaved.Text = "Параметры записаны";
+            this.labelIsSaved.Visible = false;
+            // 
             // CreateOffset
             // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(1603, 928);
+            this.ClientSize = new System.Drawing.Size(1593, 835);
+            this.Controls.Add(this.labelIsSaved);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label37);
@@ -1115,20 +1121,18 @@ namespace CncDataSave.UI
             this.Controls.Add(this.SaveOffsetToDB);
             this.Controls.Add(this.comboBoxProductDiameter);
             this.Controls.Add(this.comboBoxThreadType);
-            this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
             this.Name = "CreateOffset";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Load += new System.EventHandler(this.CreateOffset_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBoxThreadType;
         private System.Windows.Forms.ComboBox comboBoxProductDiameter;
         private System.Windows.Forms.Button SaveOffsetToDB;
@@ -1207,5 +1211,6 @@ namespace CncDataSave.UI
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label labelIsSaved;
     }
 }
