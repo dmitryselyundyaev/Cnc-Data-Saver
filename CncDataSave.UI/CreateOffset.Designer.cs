@@ -108,6 +108,8 @@ namespace CncDataSave.UI
             this.label38 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.labelIsSaved = new System.Windows.Forms.Label();
+            this.textBoxComment = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboBoxThreadType
@@ -145,7 +147,7 @@ namespace CncDataSave.UI
             // SaveOffsetToDB
             // 
             this.SaveOffsetToDB.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.SaveOffsetToDB.Location = new System.Drawing.Point(632, 533);
+            this.SaveOffsetToDB.Location = new System.Drawing.Point(1102, 634);
             this.SaveOffsetToDB.Name = "SaveOffsetToDB";
             this.SaveOffsetToDB.Size = new System.Drawing.Size(298, 70);
             this.SaveOffsetToDB.TabIndex = 45;
@@ -1030,18 +1032,41 @@ namespace CncDataSave.UI
             this.labelIsSaved.AutoSize = true;
             this.labelIsSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
             this.labelIsSaved.ForeColor = System.Drawing.Color.Red;
-            this.labelIsSaved.Location = new System.Drawing.Point(679, 505);
+            this.labelIsSaved.Location = new System.Drawing.Point(1149, 606);
             this.labelIsSaved.Name = "labelIsSaved";
             this.labelIsSaved.Size = new System.Drawing.Size(215, 25);
             this.labelIsSaved.TabIndex = 129;
             this.labelIsSaved.Text = "Параметры записаны";
             this.labelIsSaved.Visible = false;
             // 
+            // textBoxComment
+            // 
+            this.textBoxComment.Location = new System.Drawing.Point(987, 467);
+            this.textBoxComment.Multiline = true;
+            this.textBoxComment.Name = "textBoxComment";
+            this.textBoxComment.Size = new System.Drawing.Size(413, 123);
+            this.textBoxComment.TabIndex = 130;
+
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label23.Location = new System.Drawing.Point(982, 439);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(146, 25);
+            this.label23.TabIndex = 131;
+            this.label23.Text = "Комментарий";
+            // 
             // CreateOffset
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1593, 835);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.textBoxComment);
             this.Controls.Add(this.labelIsSaved);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label38);
@@ -1212,5 +1237,7 @@ namespace CncDataSave.UI
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label labelIsSaved;
+        private System.Windows.Forms.TextBox textBoxComment;
+        private System.Windows.Forms.Label label23;
     }
 }

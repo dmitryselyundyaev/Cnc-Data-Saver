@@ -21,7 +21,7 @@ namespace CncDataSaver.BL.Model
         public virtual User User { get; set; }
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
-
+        public string Comment { get; set; }
         public override string ToString()
         {
             return $"{OffsetDataId} Станок:{Machine} Сортамент:{Product.ThreadType}/{Product.Diameter} ";

@@ -87,5 +87,21 @@ namespace CncDataSave.UI
             childForm.BringToFront();
             childForm.Show();
         }
+
+        private void buttonStopApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void WearCheckToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var WearCheck = new MachineWear<OffsetData>(db.OffsetData, db);
+            openChildForm(WearCheck);
+        }
+
+        private void panelMainChild_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

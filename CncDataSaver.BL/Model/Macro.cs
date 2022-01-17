@@ -11,11 +11,11 @@ namespace CncDataSaver.BL.Model
         public int MacroId { get; set; }
         public virtual ICollection<OffsetData> Offsets { get; set; }
         public double? Offset { get; set; }
-        public double? Conicity { get; set; }
-        public double? Zajust { get; set; }
-        public double? ThreadPass { get; set; } 
-        public double? OdSeal { get; set; }
-        public double? Standoff { get; set; }
+        public decimal? Conicity { get; set; }
+        public decimal? Zajust { get; set; }
+        public decimal? ThreadPass { get; set; } 
+        public decimal? OdSeal { get; set; }
+        public decimal? Standoff { get; set; }
 
 
         public override string ToString()

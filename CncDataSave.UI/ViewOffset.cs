@@ -32,7 +32,7 @@ namespace CncDataSave.UI
         }
 
         /// <summary>
-        /// Кнопка поиска в базе,с фильтрами
+        /// Search button.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -95,6 +95,15 @@ namespace CncDataSave.UI
                     {
                         var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData
+                            .Where(u => u.Machine == comboBoxMachineNumberView.Text)
+                            .Where(u => u.Product.Diameter == convertedDiameter).ToList();
+                        listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
+                    }
+                    else
+                    {
+                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
+                        var source = db.OffsetData
+                            .Where(u => u.Product.ThreadType == comboBoxThreadTypeView.Text)
                             .Where(u => u.Machine == comboBoxMachineNumberView.Text)
                             .Where(u => u.Product.Diameter == convertedDiameter).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
@@ -180,50 +189,47 @@ namespace CncDataSave.UI
             textBoxMachineView.Text = selectedOffset.Machine;
             textBoxDiameterView.Text = selectedOffset.Product.Diameter.ToString();
             textBoxThreadTypeView.Text = selectedOffset.Product.ThreadType;
-            textBoxStandoff.Text = selectedOffset.Macro.Standoff.ToString();
-            textBoxStandoffSeal.Text = selectedOffset.Macro.OdSeal.ToString();
-            textBoxThreadPasses.Text = selectedOffset.Macro.ThreadPass.ToString();
-            textBoxZajust.Text = selectedOffset.Macro.Zajust.ToString();
+            textBoxStandoff.Text = string.Format("{0:N4}", selectedOffset.Macro.Standoff);
+            textBoxStandoffSeal.Text = string.Format("{0:N4}", selectedOffset.Macro.OdSeal);
+            textBoxThreadPasses.Text = string.Format("{0:N4}", selectedOffset.Macro.ThreadPass);
+            textBoxZajust.Text = string.Format("{0:N4}", selectedOffset.Macro.Zajust);
+            textBoxCommentView.Text = selectedOffset.Comment.ToString();
             #region X's and Z's 
 
-            textBoxX1.Text = selectedOffset.Channel1.X1.ToString();
-            textBoxX2.Text = selectedOffset.Channel1.X2.ToString();
-            textBoxX3.Text = selectedOffset.Channel1.X3.ToString();
-            textBoxX4.Text = selectedOffset.Channel1.X4.ToString();
-            textBoxX5.Text = selectedOffset.Channel1.X5.ToString();
-            textBoxX6.Text = selectedOffset.Channel1.X6.ToString();
-            textBoxX7.Text = selectedOffset.Channel1.X7.ToString();
-            textBoxZ1.Text = selectedOffset.Channel1.Z1.ToString();
-            textBoxZ2.Text = selectedOffset.Channel1.Z2.ToString();
-            textBoxZ3.Text = selectedOffset.Channel1.Z3.ToString();
-            textBoxZ4.Text = selectedOffset.Channel1.Z4.ToString();
-            textBoxZ5.Text = selectedOffset.Channel1.Z5.ToString();
-            textBoxZ6.Text = selectedOffset.Channel1.Z6.ToString();
-            textBoxZ7.Text = selectedOffset.Channel1.Z7.ToString();
-            textBoxY1.Text = selectedOffset.Channel1.Y1.ToString();
-            textBoxY2.Text = selectedOffset.Channel1.Y2.ToString();
-            textBoxY3.Text = selectedOffset.Channel1.Y3.ToString();
-            textBoxY4.Text = selectedOffset.Channel1.Y4.ToString();
-            textBoxCannel2X1.Text = selectedOffset.Channel2.X1.ToString();
-            textBoxCannel2X2.Text = selectedOffset.Channel2.X2.ToString();
-            textBoxCannel2X3.Text = selectedOffset.Channel2.X3.ToString();
-            textBoxCannel2X4.Text = selectedOffset.Channel2.X4.ToString();
-            textBoxCannel2X5.Text = selectedOffset.Channel2.X5.ToString();
-            textBoxCannel2X6.Text = selectedOffset.Channel2.X6.ToString();
-            textBoxCannel2X7.Text = selectedOffset.Channel2.X7.ToString();
-            textBoxCannel2Z1.Text = selectedOffset.Channel2.Z1.ToString();
-            textBoxCannel2Z2.Text = selectedOffset.Channel2.Z2.ToString();
-            textBoxCannel2Z3.Text = selectedOffset.Channel2.Z3.ToString();
-            textBoxCannel2Z4.Text = selectedOffset.Channel2.Z4.ToString();
-            textBoxCannel2Z5.Text = selectedOffset.Channel2.Z5.ToString();
-            textBoxCannel2Z6.Text = selectedOffset.Channel2.Z6.ToString();
-            textBoxCannel2Z7.Text = selectedOffset.Channel2.Z7.ToString();
+            textBoxX1.Text = string.Format("{0:N4}", selectedOffset.Channel1.X1);
+            textBoxX2.Text = string.Format("{0:N4}", selectedOffset.Channel1.X2);
+            textBoxX3.Text = string.Format("{0:N4}", selectedOffset.Channel1.X3);
+            textBoxX4.Text = string.Format("{0:N4}", selectedOffset.Channel1.X4);
+            textBoxX5.Text = string.Format("{0:N4}", selectedOffset.Channel1.X5);
+            textBoxX6.Text = string.Format("{0:N4}", selectedOffset.Channel1.X6);
+            textBoxX7.Text = string.Format("{0:N4}", selectedOffset.Channel1.X7);
+            textBoxZ1.Text = string.Format("{0:N4}", selectedOffset.Channel1.Z1);
+            textBoxZ2.Text = string.Format("{0:N4}", selectedOffset.Channel1.Z2);
+            textBoxZ3.Text = string.Format("{0:N4}", selectedOffset.Channel1.Z3);
+            textBoxZ4.Text = string.Format("{0:N4}", selectedOffset.Channel1.Z4);
+            textBoxZ5.Text = string.Format("{0:N4}", selectedOffset.Channel1.Z5);
+            textBoxZ6.Text = string.Format("{0:N4}", selectedOffset.Channel1.Z6);
+            textBoxZ7.Text = string.Format("{0:N4}", selectedOffset.Channel1.Z7);
+            textBoxY1.Text = string.Format("{0:N4}", selectedOffset.Channel1.Y1);
+            textBoxY2.Text = string.Format("{0:N4}", selectedOffset.Channel1.Y2);
+            textBoxY3.Text = string.Format("{0:N4}", selectedOffset.Channel1.Y3);
+            textBoxY4.Text = string.Format("{0:N4}", selectedOffset.Channel1.Y4);
+            textBoxCannel2X1.Text = string.Format("{0:N4}", selectedOffset.Channel2.X1);
+            textBoxCannel2X2.Text = string.Format("{0:N4}", selectedOffset.Channel2.X2);
+            textBoxCannel2X3.Text = string.Format("{0:N4}", selectedOffset.Channel2.X3);
+            textBoxCannel2X4.Text = string.Format("{0:N4}", selectedOffset.Channel2.X4);
+            textBoxCannel2X5.Text = string.Format("{0:N4}", selectedOffset.Channel2.X5);
+            textBoxCannel2X6.Text = string.Format("{0:N4}", selectedOffset.Channel2.X6);
+            textBoxCannel2X7.Text = string.Format("{0:N4}", selectedOffset.Channel2.X7);
+            textBoxCannel2Z1.Text = string.Format("{0:N4}", selectedOffset.Channel2.Z1);
+            textBoxCannel2Z2.Text = string.Format("{0:N4}", selectedOffset.Channel2.X2);
+            textBoxCannel2Z3.Text = string.Format("{0:N4}", selectedOffset.Channel2.X3);
+            textBoxCannel2Z4.Text = string.Format("{0:N4}", selectedOffset.Channel2.X4);
+            textBoxCannel2Z5.Text = string.Format("{0:N4}", selectedOffset.Channel2.X5);
+            textBoxCannel2Z6.Text = string.Format("{0:N4}", selectedOffset.Channel2.X6);
+            textBoxCannel2Z7.Text = string.Format("{0:N4}", selectedOffset.Channel2.X7);
             #endregion
         }
 
-        private void textBoxOffsetName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
