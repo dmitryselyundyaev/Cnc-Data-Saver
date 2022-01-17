@@ -95,13 +95,19 @@ namespace CncDataSave.UI
 
         private void WearCheckToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var WearCheck = new MachineWear<OffsetData>(db.OffsetData, db);
-            openChildForm(WearCheck);
+            var wearCheck = new MachineWear<OffsetData>(db.OffsetData, db);
+            openChildForm(wearCheck);
         }
 
         private void panelMainChild_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ProgramsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var programs = new ProgramText();
+            openChildForm(programs);
         }
     }
 }

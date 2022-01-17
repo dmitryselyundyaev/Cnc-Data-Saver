@@ -86,7 +86,7 @@ namespace CncDataSave.UI
                     db.Users.Add(currentUser);
                     db.SaveChanges();
                 }
-
+                #region Getting data from text box.
                 var addedCh1 = new Channel1();
                 addedCh1.X1 = Convert.ToDecimal(maskedTextBoxX1.Text);
                 addedCh1.Z1 = Convert.ToDecimal(maskedTextBoxZ1.Text);
@@ -150,9 +150,19 @@ namespace CncDataSave.UI
                 offsetAdd.Machine = comboBoxMachineNumber.Text;
                 offsetAdd.Created = DateTime.Now;
                 offsetAdd.Comment = textBoxComment.Text;
+                var dbCount = db.OffsetData.Count();
                 db.OffsetData.Add(offsetAdd);
+                #endregion
                 db.SaveChanges();
-                labelIsSaved.Show();
+                if (db.OffsetData.Count() > dbCount)
+                {
+                    labelIsSaved.Show();
+                }
+                else
+                {
+                    labelIsSaved.Text = "Не выполнено";
+                    labelIsSaved.Show();
+                }
             }
             
         }

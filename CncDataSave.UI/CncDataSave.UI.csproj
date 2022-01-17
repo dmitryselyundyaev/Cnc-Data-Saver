@@ -46,6 +46,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,6 +70,12 @@
     <Compile Include="MachineWear.Designer.cs">
       <DependentUpon>MachineWear.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProgramText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramText.Designer.cs">
+      <DependentUpon>ProgramText.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewOffset.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +96,11 @@
     <EmbeddedResource Include="MachineWear.resx">
       <DependentUpon>MachineWear.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProgramText.resx">
+      <DependentUpon>ProgramText.cs</DependentUpon>
+      <LastGenOutput>ProgramText1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewOffset.resx">
       <DependentUpon>ViewOffset.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,13 +108,14 @@
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -123,6 +136,15 @@
       <Project>{7e747b18-83fd-4a38-b2a9-564d0db51c48}</Project>
       <Name>CncDataSaver.BL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTCDimension.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTCCalculation.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTCProcess.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

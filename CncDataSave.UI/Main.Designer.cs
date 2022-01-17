@@ -45,13 +45,7 @@ namespace CncDataSave.UI
             this.режимыИСкоростиРезанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.скоростиРезанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.режимыРаботыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.исходныеПрограммыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вМЗ1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вМЗ4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оТТМToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оТТГToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.бАТРЕССToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вспомогательныеПрограммыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ProgramsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panelMainChild = new System.Windows.Forms.Panel();
             this.buttonStopApp = new System.Windows.Forms.Button();
@@ -65,8 +59,7 @@ namespace CncDataSave.UI
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OperationsToolStripMenuItem,
             this.помощьToolStripMenuItem,
-            this.режимыИСкоростиРезанияToolStripMenuItem,
-            this.исходныеПрограммыToolStripMenuItem});
+            this.режимыИСкоростиРезанияToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(1, 1);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1576, 33);
@@ -158,7 +151,8 @@ namespace CncDataSave.UI
             // 
             this.режимыИСкоростиРезанияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.скоростиРезанияToolStripMenuItem,
-            this.режимыРаботыToolStripMenuItem});
+            this.режимыРаботыToolStripMenuItem,
+            this.ProgramsToolStripMenuItem});
             this.режимыИСкоростиРезанияToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.режимыИСкоростиРезанияToolStripMenuItem.Name = "режимыИСкоростиРезанияToolStripMenuItem";
             this.режимыИСкоростиРезанияToolStripMenuItem.Size = new System.Drawing.Size(274, 29);
@@ -167,64 +161,21 @@ namespace CncDataSave.UI
             // скоростиРезанияToolStripMenuItem
             // 
             this.скоростиРезанияToolStripMenuItem.Name = "скоростиРезанияToolStripMenuItem";
-            this.скоростиРезанияToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
+            this.скоростиРезанияToolStripMenuItem.Size = new System.Drawing.Size(290, 30);
             this.скоростиРезанияToolStripMenuItem.Text = "Скорости резания";
             // 
             // режимыРаботыToolStripMenuItem
             // 
             this.режимыРаботыToolStripMenuItem.Name = "режимыРаботыToolStripMenuItem";
-            this.режимыРаботыToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
+            this.режимыРаботыToolStripMenuItem.Size = new System.Drawing.Size(290, 30);
             this.режимыРаботыToolStripMenuItem.Text = "Режимы работы";
             // 
-            // исходныеПрограммыToolStripMenuItem
+            // ProgramsToolStripMenuItem
             // 
-            this.исходныеПрограммыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вМЗ1ToolStripMenuItem,
-            this.вМЗ4ToolStripMenuItem,
-            this.оТТМToolStripMenuItem,
-            this.оТТГToolStripMenuItem,
-            this.бАТРЕССToolStripMenuItem,
-            this.вспомогательныеПрограммыToolStripMenuItem});
-            this.исходныеПрограммыToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.исходныеПрограммыToolStripMenuItem.Name = "исходныеПрограммыToolStripMenuItem";
-            this.исходныеПрограммыToolStripMenuItem.Size = new System.Drawing.Size(218, 29);
-            this.исходныеПрограммыToolStripMenuItem.Text = "Исходные программы";
-            // 
-            // вМЗ1ToolStripMenuItem
-            // 
-            this.вМЗ1ToolStripMenuItem.Name = "вМЗ1ToolStripMenuItem";
-            this.вМЗ1ToolStripMenuItem.Size = new System.Drawing.Size(358, 30);
-            this.вМЗ1ToolStripMenuItem.Text = "ВМЗ - 1";
-            // 
-            // вМЗ4ToolStripMenuItem
-            // 
-            this.вМЗ4ToolStripMenuItem.Name = "вМЗ4ToolStripMenuItem";
-            this.вМЗ4ToolStripMenuItem.Size = new System.Drawing.Size(358, 30);
-            this.вМЗ4ToolStripMenuItem.Text = "ВМЗ - 4";
-            // 
-            // оТТМToolStripMenuItem
-            // 
-            this.оТТМToolStripMenuItem.Name = "оТТМToolStripMenuItem";
-            this.оТТМToolStripMenuItem.Size = new System.Drawing.Size(358, 30);
-            this.оТТМToolStripMenuItem.Text = "ОТТМ";
-            // 
-            // оТТГToolStripMenuItem
-            // 
-            this.оТТГToolStripMenuItem.Name = "оТТГToolStripMenuItem";
-            this.оТТГToolStripMenuItem.Size = new System.Drawing.Size(358, 30);
-            this.оТТГToolStripMenuItem.Text = "ОТТГ";
-            // 
-            // бАТРЕССToolStripMenuItem
-            // 
-            this.бАТРЕССToolStripMenuItem.Name = "бАТРЕССToolStripMenuItem";
-            this.бАТРЕССToolStripMenuItem.Size = new System.Drawing.Size(358, 30);
-            this.бАТРЕССToolStripMenuItem.Text = "БАТРЕСС";
-            // 
-            // вспомогательныеПрограммыToolStripMenuItem
-            // 
-            this.вспомогательныеПрограммыToolStripMenuItem.Name = "вспомогательныеПрограммыToolStripMenuItem";
-            this.вспомогательныеПрограммыToolStripMenuItem.Size = new System.Drawing.Size(358, 30);
-            this.вспомогательныеПрограммыToolStripMenuItem.Text = "Вспомогательные программы";
+            this.ProgramsToolStripMenuItem.Name = "ProgramsToolStripMenuItem";
+            this.ProgramsToolStripMenuItem.Size = new System.Drawing.Size(290, 30);
+            this.ProgramsToolStripMenuItem.Text = "Исходные программы";
+            this.ProgramsToolStripMenuItem.Click += new System.EventHandler(this.ProgramsToolStripMenuItem_Click);
             // 
             // panelMainChild
             // 
@@ -296,16 +247,10 @@ namespace CncDataSave.UI
         private System.Windows.Forms.ToolStripMenuItem режимыИСкоростиРезанияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem скоростиРезанияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem режимыРаботыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem исходныеПрограммыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вМЗ1ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вМЗ4ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem оТТМToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem оТТГToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem бАТРЕССToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вспомогательныеПрограммыToolStripMenuItem;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Panel panelMainChild;
         private System.Windows.Forms.Button buttonStopApp;
+        private System.Windows.Forms.ToolStripMenuItem ProgramsToolStripMenuItem;
     }
 }
 
