@@ -147,12 +147,13 @@ namespace CncDataSave.UI
             // 
             // AxisCheckButton
             // 
+            this.AxisCheckButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.AxisCheckButton.Location = new System.Drawing.Point(668, 686);
             this.AxisCheckButton.Name = "AxisCheckButton";
             this.AxisCheckButton.Size = new System.Drawing.Size(344, 48);
             this.AxisCheckButton.TabIndex = 10;
             this.AxisCheckButton.Text = "Запустить проверку";
-            this.AxisCheckButton.UseVisualStyleBackColor = true;
+            this.AxisCheckButton.UseVisualStyleBackColor = false;
             this.AxisCheckButton.Click += new System.EventHandler(this.AxisCheckButton_Click);
             // 
             // MachineWear

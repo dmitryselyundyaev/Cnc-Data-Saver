@@ -29,37 +29,37 @@ namespace CncDataSave.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Dimension");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Calculation");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Process");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("BTC", new System.Windows.Forms.TreeNode[] {
-            treeNode19,
-            treeNode20,
-            treeNode21});
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Dimension");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Calculation");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Process");
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("OTTM", new System.Windows.Forms.TreeNode[] {
-            treeNode23,
-            treeNode24,
-            treeNode25});
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Dimension");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Calculation");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Process");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("ВМЗ-1", new System.Windows.Forms.TreeNode[] {
-            treeNode27,
-            treeNode28,
-            treeNode29});
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Dimension");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Calculation");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Process");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("ВМЗ-4", new System.Windows.Forms.TreeNode[] {
-            treeNode31,
-            treeNode32,
-            treeNode33});
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Table");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Вспомогательные программы", new System.Windows.Forms.TreeNode[] {
-            treeNode35});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Dimension");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Calculation");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Process");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("BTC", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Dimension");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Calculation");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Process");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("OTTM", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Dimension");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Calculation");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Process");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("ВМЗ-1", new System.Windows.Forms.TreeNode[] {
+            treeNode9,
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Dimension");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Calculation");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Process");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("ВМЗ-4", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14,
+            treeNode15});
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Table");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Вспомогательные программы", new System.Windows.Forms.TreeNode[] {
+            treeNode17});
             this.treeViewListOfPrograms = new System.Windows.Forms.TreeView();
             this.textBoxProgramView = new System.Windows.Forms.TextBox();
             this.CleanButton = new System.Windows.Forms.Button();
@@ -75,48 +75,48 @@ namespace CncDataSave.UI
             this.treeViewListOfPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.treeViewListOfPrograms.Location = new System.Drawing.Point(45, 89);
             this.treeViewListOfPrograms.Name = "treeViewListOfPrograms";
-            treeNode19.Name = "DimensionBTC";
-            treeNode19.Text = "Dimension";
-            treeNode20.Name = "CalculationBTC";
-            treeNode20.Text = "Calculation";
-            treeNode21.Name = "ProcessBTC";
-            treeNode21.Text = "Process";
-            treeNode22.Name = "BTC";
-            treeNode22.Text = "BTC";
-            treeNode23.Name = "DimensionOTTM";
-            treeNode23.Text = "Dimension";
-            treeNode24.Name = "CalculationOTTM";
-            treeNode24.Text = "Calculation";
-            treeNode25.Name = "ProcessOTTM";
-            treeNode25.Text = "Process";
-            treeNode26.Name = "OTTM";
-            treeNode26.Text = "OTTM";
-            treeNode27.Name = "DimensionVSW-1";
-            treeNode27.Text = "Dimension";
-            treeNode28.Name = "CalculationVSW-1";
-            treeNode28.Text = "Calculation";
-            treeNode29.Name = "ProcessVSW-1";
-            treeNode29.Text = "Process";
-            treeNode30.Name = "VSW-1";
-            treeNode30.Text = "ВМЗ-1";
-            treeNode31.Name = "DimensionVSW-4";
-            treeNode31.Text = "Dimension";
-            treeNode32.Name = "CalculationVSW-4";
-            treeNode32.Text = "Calculation";
-            treeNode33.Name = "ProcessVSW-4";
-            treeNode33.Text = "Process";
-            treeNode34.Name = "VSW-4";
-            treeNode34.Text = "ВМЗ-4";
-            treeNode35.Name = "Table";
-            treeNode35.Text = "Table";
-            treeNode36.Name = "SidePrograms";
-            treeNode36.Text = "Вспомогательные программы";
+            treeNode1.Name = "DimensionBTC";
+            treeNode1.Text = "Dimension";
+            treeNode2.Name = "CalculationBTC";
+            treeNode2.Text = "Calculation";
+            treeNode3.Name = "ProcessBTC";
+            treeNode3.Text = "Process";
+            treeNode4.Name = "BTC";
+            treeNode4.Text = "BTC";
+            treeNode5.Name = "DimensionOTTM";
+            treeNode5.Text = "Dimension";
+            treeNode6.Name = "CalculationOTTM";
+            treeNode6.Text = "Calculation";
+            treeNode7.Name = "ProcessOTTM";
+            treeNode7.Text = "Process";
+            treeNode8.Name = "OTTM";
+            treeNode8.Text = "OTTM";
+            treeNode9.Name = "DimensionVSW-1";
+            treeNode9.Text = "Dimension";
+            treeNode10.Name = "CalculationVSW-1";
+            treeNode10.Text = "Calculation";
+            treeNode11.Name = "ProcessVSW-1";
+            treeNode11.Text = "Process";
+            treeNode12.Name = "VSW-1";
+            treeNode12.Text = "ВМЗ-1";
+            treeNode13.Name = "DimensionVSW-4";
+            treeNode13.Text = "Dimension";
+            treeNode14.Name = "CalculationVSW-4";
+            treeNode14.Text = "Calculation";
+            treeNode15.Name = "ProcessVSW-4";
+            treeNode15.Text = "Process";
+            treeNode16.Name = "VSW-4";
+            treeNode16.Text = "ВМЗ-4";
+            treeNode17.Name = "Table";
+            treeNode17.Text = "Table";
+            treeNode18.Name = "SidePrograms";
+            treeNode18.Text = "Вспомогательные программы";
             this.treeViewListOfPrograms.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode22,
-            treeNode26,
-            treeNode30,
-            treeNode34,
-            treeNode36});
+            treeNode4,
+            treeNode8,
+            treeNode12,
+            treeNode16,
+            treeNode18});
             this.treeViewListOfPrograms.Size = new System.Drawing.Size(368, 496);
             this.treeViewListOfPrograms.TabIndex = 0;
             this.treeViewListOfPrograms.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewListOfPrograms_AfterSelect);
@@ -137,7 +137,7 @@ namespace CncDataSave.UI
             // 
             // CleanButton
             // 
-            this.CleanButton.Location = new System.Drawing.Point(1099, 704);
+            this.CleanButton.Location = new System.Drawing.Point(1099, 728);
             this.CleanButton.Name = "CleanButton";
             this.CleanButton.Size = new System.Drawing.Size(152, 26);
             this.CleanButton.TabIndex = 2;
@@ -148,7 +148,7 @@ namespace CncDataSave.UI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label4.Location = new System.Drawing.Point(40, 61);
@@ -160,7 +160,7 @@ namespace CncDataSave.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.Location = new System.Drawing.Point(585, 9);
@@ -173,7 +173,7 @@ namespace CncDataSave.UI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1552, 766);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);

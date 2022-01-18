@@ -27,43 +27,13 @@ namespace CncDataSave.UI
 
             
         }
-        /// <summary>
-        /// Opening offset creation tab in main panel.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void CreateOffsetToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var CreateOffset = new CreateOffset<OffsetData>(db.OffsetData,db);
-            openChildForm(CreateOffset);
-            
-        }
 
-        private void операцииToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         private void Main_Load(object sender, EventArgs e)
         {
 
         }
 
-        /// <summary>
-        /// Opening offset view tab in main panel.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OffsetViewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var ViewOffset = new ViewOffset<OffsetData>(db.OffsetData, db);
-            openChildForm(ViewOffset);
-        }
         /// <summary>
         /// Flag for method with child form.
         /// </summary>
@@ -92,22 +62,46 @@ namespace CncDataSave.UI
         {
             Application.Exit();
         }
-
-        private void WearCheckToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mainButtonColour()
         {
+            if(activeForm != null)
+            {
+                AddOffset.BackColor = Color.Silver;
+                ViewOffset.BackColor = Color.Silver;
+                AxisCheck.BackColor = Color.Silver;
+                DefProgram.BackColor = Color.Silver;
+            }
+        }
+        private void AddOffset_Click(object sender, EventArgs e)
+        {
+            mainButtonColour();
+            var CreateOffset = new CreateOffset<OffsetData>(db.OffsetData, db);
+            openChildForm(CreateOffset);
+            AddOffset.BackColor = Color.Gray;
+        }
+
+        private void ViewOffset_Click(object sender, EventArgs e)
+        {
+            mainButtonColour();
+            var viewOffset = new ViewOffset<OffsetData>(db.OffsetData, db);
+            openChildForm(viewOffset);
+            ViewOffset.BackColor = Color.Gray;
+        }
+
+        private void AxisCheck_Click(object sender, EventArgs e)
+        {
+            mainButtonColour();
             var wearCheck = new MachineWear<OffsetData>(db.OffsetData, db);
             openChildForm(wearCheck);
+            AxisCheck.BackColor = Color.Gray;
         }
 
-        private void panelMainChild_Paint(object sender, PaintEventArgs e)
+        private void DefProgram_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void ProgramsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            mainButtonColour();
             var programs = new ProgramText();
             openChildForm(programs);
+            DefProgram.BackColor = Color.Gray;
         }
     }
 }
