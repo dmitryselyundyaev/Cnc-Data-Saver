@@ -69,9 +69,6 @@ namespace CncDataSave.UI
             // 
             // treeViewListOfPrograms
             // 
-            this.treeViewListOfPrograms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.treeViewListOfPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.treeViewListOfPrograms.Location = new System.Drawing.Point(45, 89);
             this.treeViewListOfPrograms.Name = "treeViewListOfPrograms";
@@ -123,9 +120,6 @@ namespace CncDataSave.UI
             // 
             // textBoxProgramView
             // 
-            this.textBoxProgramView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxProgramView.Location = new System.Drawing.Point(579, 31);
             this.textBoxProgramView.Multiline = true;
             this.textBoxProgramView.Name = "textBoxProgramView";

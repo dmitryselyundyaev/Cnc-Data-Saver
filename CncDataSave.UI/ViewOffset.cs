@@ -43,7 +43,8 @@ namespace CncDataSave.UI
                 
                 if (checkBoxPickAllTime.Checked)
                 {
-                    listBoxViewDataList.DataSource = set.Local.ToBindingList();
+                    var source = db.OffsetData.OrderByDescending(u => u.OffsetDataId).ToList();
+                    listBoxViewDataList.DataSource = source;
                 }
                 else
                 {

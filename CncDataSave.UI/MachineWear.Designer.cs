@@ -47,6 +47,7 @@ namespace CncDataSave.UI
             // 
             // X2X
             // 
+            this.X2X.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.X2X.AutoSize = true;
             this.X2X.BackColor = System.Drawing.Color.Transparent;
             this.X2X.Location = new System.Drawing.Point(797, 387);
@@ -57,6 +58,7 @@ namespace CncDataSave.UI
             // 
             // X2Z
             // 
+            this.X2Z.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.X2Z.AutoSize = true;
             this.X2Z.BackColor = System.Drawing.Color.Transparent;
             this.X2Z.Location = new System.Drawing.Point(806, 243);
@@ -67,6 +69,7 @@ namespace CncDataSave.UI
             // 
             // X1Y
             // 
+            this.X1Y.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.X1Y.AutoSize = true;
             this.X1Y.BackColor = System.Drawing.Color.Transparent;
             this.X1Y.Location = new System.Drawing.Point(696, 447);
@@ -77,6 +80,7 @@ namespace CncDataSave.UI
             // 
             // X1X
             // 
+            this.X1X.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.X1X.AutoSize = true;
             this.X1X.BackColor = System.Drawing.Color.Transparent;
             this.X1X.Location = new System.Drawing.Point(696, 314);
@@ -87,6 +91,7 @@ namespace CncDataSave.UI
             // 
             // X1Z
             // 
+            this.X1Z.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.X1Z.AutoSize = true;
             this.X1Z.BackColor = System.Drawing.Color.Transparent;
             this.X1Z.Location = new System.Drawing.Point(531, 387);
@@ -97,6 +102,7 @@ namespace CncDataSave.UI
             // 
             // Channel1Z
             // 
+            this.Channel1Z.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Channel1Z.AutoSize = true;
             this.Channel1Z.BackColor = System.Drawing.Color.Transparent;
             this.Channel1Z.Location = new System.Drawing.Point(531, 404);
@@ -107,6 +113,7 @@ namespace CncDataSave.UI
             // 
             // Channel1X
             // 
+            this.Channel1X.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Channel1X.AutoSize = true;
             this.Channel1X.BackColor = System.Drawing.Color.Transparent;
             this.Channel1X.Location = new System.Drawing.Point(696, 331);
@@ -117,6 +124,7 @@ namespace CncDataSave.UI
             // 
             // Channel1Y
             // 
+            this.Channel1Y.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Channel1Y.AutoSize = true;
             this.Channel1Y.BackColor = System.Drawing.Color.Transparent;
             this.Channel1Y.Location = new System.Drawing.Point(696, 430);
@@ -127,6 +135,7 @@ namespace CncDataSave.UI
             // 
             // Channel2X
             // 
+            this.Channel2X.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Channel2X.AutoSize = true;
             this.Channel2X.BackColor = System.Drawing.Color.Transparent;
             this.Channel2X.Location = new System.Drawing.Point(797, 404);
@@ -137,6 +146,7 @@ namespace CncDataSave.UI
             // 
             // Channel2Z
             // 
+            this.Channel2Z.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Channel2Z.AutoSize = true;
             this.Channel2Z.BackColor = System.Drawing.Color.Transparent;
             this.Channel2Z.Location = new System.Drawing.Point(806, 260);
@@ -147,6 +157,7 @@ namespace CncDataSave.UI
             // 
             // AxisCheckButton
             // 
+            this.AxisCheckButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AxisCheckButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.AxisCheckButton.Location = new System.Drawing.Point(668, 686);
             this.AxisCheckButton.Name = "AxisCheckButton";
@@ -160,6 +171,7 @@ namespace CncDataSave.UI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1560, 802);
             this.Controls.Add(this.AxisCheckButton);
             this.Controls.Add(this.Channel2Z);

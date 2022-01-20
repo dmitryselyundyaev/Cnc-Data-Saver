@@ -114,6 +114,7 @@ namespace CncDataSave.UI
             // 
             // buttonStopApp
             // 
+            this.buttonStopApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStopApp.BackColor = System.Drawing.Color.Transparent;
             this.buttonStopApp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStopApp.BackgroundImage")));
             this.buttonStopApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -121,9 +122,9 @@ namespace CncDataSave.UI
             this.buttonStopApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonStopApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonStopApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStopApp.Location = new System.Drawing.Point(1545, 4);
+            this.buttonStopApp.Location = new System.Drawing.Point(1545, 1);
             this.buttonStopApp.Name = "buttonStopApp";
-            this.buttonStopApp.Size = new System.Drawing.Size(29, 27);
+            this.buttonStopApp.Size = new System.Drawing.Size(29, 30);
             this.buttonStopApp.TabIndex = 2;
             this.buttonStopApp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonStopApp.UseVisualStyleBackColor = false;
@@ -132,6 +133,7 @@ namespace CncDataSave.UI
             // ViewOffset
             // 
             this.ViewOffset.BackColor = System.Drawing.Color.Silver;
+            this.ViewOffset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ViewOffset.Location = new System.Drawing.Point(215, 4);
             this.ViewOffset.Name = "ViewOffset";
             this.ViewOffset.Size = new System.Drawing.Size(205, 26);
@@ -143,6 +145,12 @@ namespace CncDataSave.UI
             // AddOffset
             // 
             this.AddOffset.BackColor = System.Drawing.Color.Silver;
+            this.AddOffset.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.AddOffset.FlatAppearance.BorderSize = 2;
+            this.AddOffset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.AddOffset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.AddOffset.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddOffset.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddOffset.Location = new System.Drawing.Point(4, 4);
             this.AddOffset.Name = "AddOffset";
             this.AddOffset.Size = new System.Drawing.Size(205, 26);
@@ -154,6 +162,7 @@ namespace CncDataSave.UI
             // AxisCheck
             // 
             this.AxisCheck.BackColor = System.Drawing.Color.Silver;
+            this.AxisCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AxisCheck.Location = new System.Drawing.Point(426, 4);
             this.AxisCheck.Name = "AxisCheck";
             this.AxisCheck.Size = new System.Drawing.Size(205, 26);
@@ -165,6 +174,7 @@ namespace CncDataSave.UI
             // DefProgram
             // 
             this.DefProgram.BackColor = System.Drawing.Color.Silver;
+            this.DefProgram.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DefProgram.Location = new System.Drawing.Point(637, 4);
             this.DefProgram.Name = "DefProgram";
             this.DefProgram.Size = new System.Drawing.Size(205, 26);
@@ -176,6 +186,7 @@ namespace CncDataSave.UI
             // ButtonUserNext
             // 
             this.ButtonUserNext.BackColor = System.Drawing.Color.Silver;
+            this.ButtonUserNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ButtonUserNext.Location = new System.Drawing.Point(848, 5);
             this.ButtonUserNext.Name = "ButtonUserNext";
             this.ButtonUserNext.Size = new System.Drawing.Size(205, 26);
@@ -224,7 +235,6 @@ namespace CncDataSave.UI
         private System.Windows.Forms.Panel panelMainChild;
         private System.Windows.Forms.Button buttonStopApp;
         private System.Windows.Forms.Button ViewOffset;
-        private System.Windows.Forms.Button AddOffset;
         private System.Windows.Forms.Button AxisCheck;
         private System.Windows.Forms.Button DefProgram;
         private System.Windows.Forms.TextBox PasswordCheckBox;
@@ -234,6 +244,7 @@ namespace CncDataSave.UI
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button ButtonUserNext;
         private System.Windows.Forms.Label LoginLabel;
+        private System.Windows.Forms.Button AddOffset;
     }
 }
 

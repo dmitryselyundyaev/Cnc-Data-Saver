@@ -28,6 +28,7 @@ namespace CncDataSave.UI
             ViewOffset.Enabled = false;
             AxisCheck.Enabled = false;
             DefProgram.Enabled = false;
+            
         }
         protected override void WndProc(ref Message m)
         {
@@ -39,7 +40,10 @@ namespace CncDataSave.UI
         }
         private void Main_Load(object sender, EventArgs e)
         {
-            
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Normal;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         /// <summary>
@@ -82,6 +86,7 @@ namespace CncDataSave.UI
         }
         private void MainButtonEnabled()
         {
+
             AddOffset.Enabled = true;
             ViewOffset.Enabled = true;
             AxisCheck.Enabled = true;
