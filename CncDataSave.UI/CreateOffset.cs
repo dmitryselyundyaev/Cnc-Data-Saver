@@ -1,24 +1,18 @@
 ﻿using CncDataSaver.BL.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CncDataSaver.BL;
-using System.Threading;
 
 namespace CncDataSave.UI
 {
     public partial class CreateOffset<T> : Form
         where T : class
     {
-        CncDataSaverContext db;
-        DbSet<T> set;
+        readonly CncDataSaverContext db;
+        private readonly DbSet<T> set;
 
         public CreateOffset(DbSet<T> set, CncDataSaverContext db)
         {
@@ -40,22 +34,6 @@ namespace CncDataSave.UI
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         /// <summary>
         /// Button to save offset to data base.
         /// 
@@ -160,18 +138,12 @@ namespace CncDataSave.UI
                 }
                 else
                 {
+                    labelIsSaved.BackColor = Color.Red;
                     labelIsSaved.Text = "Не выполнено";
                     labelIsSaved.Show();
                 }
             }
             
         }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-
     }
 }

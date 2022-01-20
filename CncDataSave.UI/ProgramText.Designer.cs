@@ -133,7 +133,6 @@ namespace CncDataSave.UI
             this.textBoxProgramView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxProgramView.Size = new System.Drawing.Size(672, 667);
             this.textBoxProgramView.TabIndex = 1;
-            this.textBoxProgramView.TextChanged += new System.EventHandler(this.textBoxProgramView_TextChanged);
             // 
             // CleanButton
             // 

@@ -15,8 +15,8 @@ namespace CncDataSave.UI
     public partial class MachineWear<T> : Form
         where T : class
     {
-        CncDataSaverContext db;
-        DbSet<T> set;
+        readonly CncDataSaverContext db;
+        private readonly DbSet<T> set;
 
         public MachineWear(DbSet<T> set, CncDataSaverContext db)
         {

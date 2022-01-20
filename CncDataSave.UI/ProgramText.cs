@@ -76,12 +76,6 @@ namespace CncDataSave.UI
         {
 
         }
-
-        private void textBoxProgramView_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CleanButton_Click(object sender, EventArgs e)
         {
             textBoxProgramView.Text = null;
