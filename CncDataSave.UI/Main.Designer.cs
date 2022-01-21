@@ -34,7 +34,6 @@ namespace CncDataSave.UI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panelMainChild = new System.Windows.Forms.Panel();
             this.LoginLabel = new System.Windows.Forms.Label();
             this.LabelPassword = new System.Windows.Forms.Label();
@@ -48,7 +47,9 @@ namespace CncDataSave.UI
             this.AddOffset = new System.Windows.Forms.Button();
             this.AxisCheck = new System.Windows.Forms.Button();
             this.DefProgram = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMainChild.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMainChild
@@ -66,6 +67,7 @@ namespace CncDataSave.UI
             this.panelMainChild.Controls.Add(this.LoginButton);
             this.panelMainChild.Controls.Add(this.PasswordCheckBox);
             this.panelMainChild.Controls.Add(this.LoginTextBox);
+            this.panelMainChild.Controls.Add(this.pictureBox1);
             this.panelMainChild.Location = new System.Drawing.Point(4, 32);
             this.panelMainChild.Name = "panelMainChild";
             this.panelMainChild.Size = new System.Drawing.Size(1570, 813);
@@ -74,7 +76,7 @@ namespace CncDataSave.UI
             // LoginLabel
             // 
             this.LoginLabel.AutoSize = true;
-            this.LoginLabel.Location = new System.Drawing.Point(115, 100);
+            this.LoginLabel.Location = new System.Drawing.Point(102, 110);
             this.LoginLabel.Name = "LoginLabel";
             this.LoginLabel.Size = new System.Drawing.Size(0, 13);
             this.LoginLabel.TabIndex = 5;
@@ -82,7 +84,7 @@ namespace CncDataSave.UI
             // LabelPassword
             // 
             this.LabelPassword.AutoSize = true;
-            this.LabelPassword.Location = new System.Drawing.Point(35, 56);
+            this.LabelPassword.Location = new System.Drawing.Point(17, 68);
             this.LabelPassword.Name = "LabelPassword";
             this.LabelPassword.Size = new System.Drawing.Size(45, 13);
             this.LabelPassword.TabIndex = 4;
@@ -91,7 +93,7 @@ namespace CncDataSave.UI
             // labelUserName
             // 
             this.labelUserName.AutoSize = true;
-            this.labelUserName.Location = new System.Drawing.Point(35, 11);
+            this.labelUserName.Location = new System.Drawing.Point(17, 23);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(103, 13);
             this.labelUserName.TabIndex = 3;
@@ -99,7 +101,8 @@ namespace CncDataSave.UI
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(114, 123);
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LoginButton.Location = new System.Drawing.Point(105, 126);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(89, 25);
             this.LoginButton.TabIndex = 2;
@@ -109,7 +112,7 @@ namespace CncDataSave.UI
             // 
             // PasswordCheckBox
             // 
-            this.PasswordCheckBox.Location = new System.Drawing.Point(57, 75);
+            this.PasswordCheckBox.Location = new System.Drawing.Point(39, 87);
             this.PasswordCheckBox.Name = "PasswordCheckBox";
             this.PasswordCheckBox.PasswordChar = '*';
             this.PasswordCheckBox.Size = new System.Drawing.Size(146, 20);
@@ -118,7 +121,7 @@ namespace CncDataSave.UI
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.Location = new System.Drawing.Point(57, 31);
+            this.LoginTextBox.Location = new System.Drawing.Point(39, 43);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(146, 20);
             this.LoginTextBox.TabIndex = 0;
@@ -219,6 +222,15 @@ namespace CncDataSave.UI
             this.DefProgram.UseVisualStyleBackColor = false;
             this.DefProgram.Click += new System.EventHandler(this.DefProgram_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(227, 167);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -243,6 +255,7 @@ namespace CncDataSave.UI
             this.Load += new System.EventHandler(this.Main_Load);
             this.panelMainChild.ResumeLayout(false);
             this.panelMainChild.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,7 +271,6 @@ namespace CncDataSave.UI
 
 
         #endregion
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Panel panelMainChild;
         private System.Windows.Forms.Button buttonStopApp;
         private System.Windows.Forms.Button ViewOffset;
@@ -272,6 +284,7 @@ namespace CncDataSave.UI
         private System.Windows.Forms.Button ButtonUserNext;
         private System.Windows.Forms.Label LoginLabel;
         private System.Windows.Forms.Button AddOffset;
+        private PictureBox pictureBox1;
     }
 }
 

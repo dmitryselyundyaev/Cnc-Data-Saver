@@ -127,6 +127,7 @@ namespace CncDataSave.UI
             // comboBoxThreadType
             // 
             this.comboBoxThreadType.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.comboBoxThreadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxThreadType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxThreadType.FormattingEnabled = true;
             this.comboBoxThreadType.Items.AddRange(new object[] {
@@ -136,7 +137,6 @@ namespace CncDataSave.UI
             "ВМЗ-1",
             "БАТРЕСС",
             "ВМЗ-4"});
-            this.comboBoxThreadType.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboBoxThreadType.Location = new System.Drawing.Point(1283, 282);
             this.comboBoxThreadType.Name = "comboBoxThreadType";
             this.comboBoxThreadType.Size = new System.Drawing.Size(121, 21);
@@ -145,6 +145,7 @@ namespace CncDataSave.UI
             // comboBoxProductDiameter
             // 
             this.comboBoxProductDiameter.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.comboBoxProductDiameter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProductDiameter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxProductDiameter.FormattingEnabled = true;
             this.comboBoxProductDiameter.Items.AddRange(new object[] {
@@ -153,7 +154,6 @@ namespace CncDataSave.UI
             "168",
             "324",
             "426"});
-            this.comboBoxProductDiameter.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboBoxProductDiameter.Location = new System.Drawing.Point(1283, 324);
             this.comboBoxProductDiameter.Name = "comboBoxProductDiameter";
             this.comboBoxProductDiameter.Size = new System.Drawing.Size(121, 21);
@@ -223,13 +223,13 @@ namespace CncDataSave.UI
             // comboBoxMachineNumber
             // 
             this.comboBoxMachineNumber.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.comboBoxMachineNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMachineNumber.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxMachineNumber.FormattingEnabled = true;
             this.comboBoxMachineNumber.Items.AddRange(new object[] {
             "",
             "РНС 1",
             "РНС 2"});
-            this.comboBoxMachineNumber.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboBoxMachineNumber.Location = new System.Drawing.Point(1283, 366);
             this.comboBoxMachineNumber.Name = "comboBoxMachineNumber";
             this.comboBoxMachineNumber.Size = new System.Drawing.Size(121, 21);
@@ -1049,7 +1049,7 @@ namespace CncDataSave.UI
             this.labelIsSaved.AutoSize = true;
             this.labelIsSaved.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
             this.labelIsSaved.ForeColor = System.Drawing.Color.DarkCyan;
-            this.labelIsSaved.Location = new System.Drawing.Point(1284, 476);
+            this.labelIsSaved.Location = new System.Drawing.Point(1284, 599);
             this.labelIsSaved.Name = "labelIsSaved";
             this.labelIsSaved.Size = new System.Drawing.Size(173, 20);
             this.labelIsSaved.TabIndex = 129;
