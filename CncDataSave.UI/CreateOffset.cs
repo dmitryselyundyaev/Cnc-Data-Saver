@@ -29,9 +29,11 @@ namespace CncDataSave.UI
 
         }
 
-        private void CreateOffset_Load_1(object sender, EventArgs e)
+        private void OffsetComboBoxTextColourDef()
         {
-
+            comboBoxThreadType.BackColor = Color.Gray;
+            comboBoxProductDiameter.BackColor = Color.Gray;
+            comboBoxMachineNumber.BackColor = Color.Gray;
         }
 
         /// <summary>
@@ -47,9 +49,23 @@ namespace CncDataSave.UI
             {
                 MessageBox.Show("Заполните параметры сортамента", "Ошибка заполнения данных",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (string.IsNullOrEmpty(comboBoxThreadType.Text))
+                {
+                    comboBoxThreadType.BackColor = Color.Red;
+                }
+                if (string.IsNullOrEmpty(comboBoxProductDiameter.Text))
+                {
+                    comboBoxProductDiameter.BackColor = Color.Red;
+                }
+                if (string.IsNullOrEmpty(comboBoxMachineNumber.Text))
+                {
+                    comboBoxMachineNumber.BackColor = Color.Red;
+                }
             }
+
             else
             {
+                OffsetComboBoxTextColourDef();
                 set.Load();
                 var systemName = Environment.UserName;
                 User currentUser;
@@ -144,6 +160,11 @@ namespace CncDataSave.UI
                 }
             }
             
+        }
+
+        private void CreateOffset_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

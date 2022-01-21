@@ -118,13 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BTCProcess" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTCProcess.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
   <data name="BTCCalculation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTCCalculation.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
   </data>
   <data name="BTCDimension" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BTCDimension.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
   </data>
-  <data name="BTCProcess" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BTCProcess.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  <data name="premium-icon-user-4548538" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\premium-icon-user-4548538.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

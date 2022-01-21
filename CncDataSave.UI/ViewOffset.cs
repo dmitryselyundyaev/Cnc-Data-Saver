@@ -1,4 +1,5 @@
-﻿using CncDataSaver.BL.Model;
+﻿using CncDataSave.UI.Properties;
+using CncDataSaver.BL.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,7 @@ namespace CncDataSave.UI
 
         private void ViewOffset_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         /// <summary>
@@ -177,7 +178,6 @@ namespace CncDataSave.UI
                             .OrderByDescending(u => u.OffsetDataId).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                     }
-
                 }
             }
 
@@ -239,6 +239,7 @@ namespace CncDataSave.UI
             textBoxCannel2Z7.Text = string.Format("{0:N4}", selectedOffset.Channel2.X7);
             #endregion
         }
+
 
     }
 }

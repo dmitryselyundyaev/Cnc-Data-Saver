@@ -44,6 +44,9 @@ namespace CncDataSave.UI
             this.WindowState = FormWindowState.Normal;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(ButtonUserNext, "Сменить пользователя");
+            toolTip.SetToolTip(buttonStopApp, "Закрыть приложени");
         }
 
         /// <summary>
@@ -73,6 +76,7 @@ namespace CncDataSave.UI
         private void ButtonStopApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            
         }
         private void MainButtonColour()
         {
@@ -134,7 +138,10 @@ namespace CncDataSave.UI
 
         private void ButtonUserNext_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Введите данные нового пользователя", "Смена пользователя",
+                      MessageBoxButtons.OK, MessageBoxIcon.Information);
             Application.Restart();
+
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
@@ -146,13 +153,17 @@ namespace CncDataSave.UI
                 MainButtonEnabled();
                 LoginLabel.Text = "Вход успешный";
                 LoginButton.Hide();
+                ButtonUserNext.Visible = true;
                 LoginTextBox.Enabled = false;
                 PasswordCheckBox.Enabled = false;
+
             }
             else
             {
                 LoginLabel.Text = "Не верные данные";
             }
         }
+
+
     }
 }

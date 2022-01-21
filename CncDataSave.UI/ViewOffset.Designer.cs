@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace CncDataSave.UI
 {
     partial class ViewOffset<T>
@@ -29,9 +31,9 @@ namespace CncDataSave.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.laberThrType = new System.Windows.Forms.Label();
+            this.labelDiameter = new System.Windows.Forms.Label();
+            this.labelMachine = new System.Windows.Forms.Label();
             this.comboBoxMachineNumberView = new System.Windows.Forms.ComboBox();
             this.comboBoxProductDiameterView = new System.Windows.Forms.ComboBox();
             this.comboBoxThreadTypeView = new System.Windows.Forms.ComboBox();
@@ -99,24 +101,24 @@ namespace CncDataSave.UI
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.CH1Y = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.labelCH2 = new System.Windows.Forms.Label();
+            this.CH1X = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
+            this.labelZajust = new System.Windows.Forms.Label();
+            this.labelThrPass = new System.Windows.Forms.Label();
+            this.labelStandofOD = new System.Windows.Forms.Label();
+            this.labelConicity = new System.Windows.Forms.Label();
+            this.labelCreated = new System.Windows.Forms.Label();
+            this.labelUser = new System.Windows.Forms.Label();
             this.textBoxCreatedBy = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.labelResult = new System.Windows.Forms.Label();
             this.textBoxCommentView = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -126,63 +128,68 @@ namespace CncDataSave.UI
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
-            // label7
+            // laberThrType
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label7.Location = new System.Drawing.Point(163, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 17);
-            this.label7.TabIndex = 59;
-            this.label7.Text = "Тип резьбы:";
+            this.laberThrType.AutoSize = true;
+            this.laberThrType.BackColor = System.Drawing.Color.Transparent;
+            this.laberThrType.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.laberThrType.Location = new System.Drawing.Point(182, 87);
+            this.laberThrType.Name = "laberThrType";
+            this.laberThrType.Size = new System.Drawing.Size(70, 13);
+            this.laberThrType.TabIndex = 59;
+            this.laberThrType.Text = "Тип резьбы:";
             // 
-            // label6
+            // labelDiameter
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label6.Location = new System.Drawing.Point(182, 129);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 17);
-            this.label6.TabIndex = 58;
-            this.label6.Text = "Диаметр:";
+            this.labelDiameter.AutoSize = true;
+            this.labelDiameter.BackColor = System.Drawing.Color.Transparent;
+            this.labelDiameter.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelDiameter.Location = new System.Drawing.Point(196, 129);
+            this.labelDiameter.Name = "labelDiameter";
+            this.labelDiameter.Size = new System.Drawing.Size(56, 13);
+            this.labelDiameter.TabIndex = 58;
+            this.labelDiameter.Text = "Диаметр:";
             // 
-            // label5
+            // labelMachine
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label5.Location = new System.Drawing.Point(193, 171);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 17);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Станок:";
+            this.labelMachine.AutoSize = true;
+            this.labelMachine.BackColor = System.Drawing.Color.Transparent;
+            this.labelMachine.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelMachine.Location = new System.Drawing.Point(206, 171);
+            this.labelMachine.Name = "labelMachine";
+            this.labelMachine.Size = new System.Drawing.Size(46, 13);
+            this.labelMachine.TabIndex = 57;
+            this.labelMachine.Text = "Станок:";
             // 
             // comboBoxMachineNumberView
             // 
             this.comboBoxMachineNumberView.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.comboBoxMachineNumberView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxMachineNumberView.FormattingEnabled = true;
             this.comboBoxMachineNumberView.Items.AddRange(new object[] {
             "",
             "РНС 1",
             "РНС 2"});
+            this.comboBoxMachineNumberView.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboBoxMachineNumberView.Location = new System.Drawing.Point(258, 168);
             this.comboBoxMachineNumberView.Name = "comboBoxMachineNumberView";
-            this.comboBoxMachineNumberView.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxMachineNumberView.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMachineNumberView.TabIndex = 56;
             // 
             // comboBoxProductDiameterView
             // 
             this.comboBoxProductDiameterView.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.comboBoxProductDiameterView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxProductDiameterView.FormattingEnabled = true;
             this.comboBoxProductDiameterView.Items.AddRange(new object[] {
             "",
@@ -190,14 +197,16 @@ namespace CncDataSave.UI
             "168",
             "324",
             "426"});
+            this.comboBoxProductDiameterView.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboBoxProductDiameterView.Location = new System.Drawing.Point(258, 126);
             this.comboBoxProductDiameterView.Name = "comboBoxProductDiameterView";
-            this.comboBoxProductDiameterView.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxProductDiameterView.Size = new System.Drawing.Size(121, 21);
             this.comboBoxProductDiameterView.TabIndex = 55;
             // 
             // comboBoxThreadTypeView
             // 
             this.comboBoxThreadTypeView.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.comboBoxThreadTypeView.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxThreadTypeView.FormattingEnabled = true;
             this.comboBoxThreadTypeView.Items.AddRange(new object[] {
             "",
@@ -206,25 +215,26 @@ namespace CncDataSave.UI
             "ВМЗ-1",
             "БАТРЕСС",
             "ВМЗ-4"});
+            this.comboBoxThreadTypeView.DropDownStyle = ComboBoxStyle.DropDownList;
             this.comboBoxThreadTypeView.Location = new System.Drawing.Point(258, 84);
             this.comboBoxThreadTypeView.Name = "comboBoxThreadTypeView";
-            this.comboBoxThreadTypeView.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxThreadTypeView.Size = new System.Drawing.Size(121, 21);
             this.comboBoxThreadTypeView.TabIndex = 54;
             // 
             // dateTimePickerForView
             // 
             this.dateTimePickerForView.Location = new System.Drawing.Point(403, 97);
             this.dateTimePickerForView.Name = "dateTimePickerForView";
-            this.dateTimePickerForView.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePickerForView.Size = new System.Drawing.Size(200, 20);
             this.dateTimePickerForView.TabIndex = 60;
             // 
             // checkBoxPickAllTime
             // 
             this.checkBoxPickAllTime.AutoSize = true;
-            this.checkBoxPickAllTime.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.checkBoxPickAllTime.Location = new System.Drawing.Point(403, 125);
+            this.checkBoxPickAllTime.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxPickAllTime.Location = new System.Drawing.Point(403, 123);
             this.checkBoxPickAllTime.Name = "checkBoxPickAllTime";
-            this.checkBoxPickAllTime.Size = new System.Drawing.Size(117, 21);
+            this.checkBoxPickAllTime.Size = new System.Drawing.Size(95, 17);
             this.checkBoxPickAllTime.TabIndex = 61;
             this.checkBoxPickAllTime.Text = "За все время";
             this.checkBoxPickAllTime.UseVisualStyleBackColor = false;
@@ -232,7 +242,8 @@ namespace CncDataSave.UI
             // SearchButton
             // 
             this.SearchButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.SearchButton.Location = new System.Drawing.Point(285, 226);
+            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SearchButton.Location = new System.Drawing.Point(403, 198);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(218, 36);
             this.SearchButton.TabIndex = 62;
@@ -243,20 +254,19 @@ namespace CncDataSave.UI
             // listBoxViewDataList
             // 
             this.listBoxViewDataList.FormattingEnabled = true;
-            this.listBoxViewDataList.ItemHeight = 16;
-            this.listBoxViewDataList.Location = new System.Drawing.Point(91, 294);
+            this.listBoxViewDataList.Location = new System.Drawing.Point(99, 291);
             this.listBoxViewDataList.Name = "listBoxViewDataList";
-            this.listBoxViewDataList.Size = new System.Drawing.Size(609, 388);
+            this.listBoxViewDataList.Size = new System.Drawing.Size(609, 381);
             this.listBoxViewDataList.TabIndex = 63;
             this.listBoxViewDataList.SelectedIndexChanged += new System.EventHandler(this.listBoxViewDataList_SelectedIndexChanged);
             // 
             // checkBoxProductBlank
             // 
             this.checkBoxProductBlank.AutoSize = true;
-            this.checkBoxProductBlank.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.checkBoxProductBlank.Location = new System.Drawing.Point(403, 167);
+            this.checkBoxProductBlank.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxProductBlank.Location = new System.Drawing.Point(258, 194);
             this.checkBoxProductBlank.Name = "checkBoxProductBlank";
-            this.checkBoxProductBlank.Size = new System.Drawing.Size(148, 21);
+            this.checkBoxProductBlank.Size = new System.Drawing.Size(117, 17);
             this.checkBoxProductBlank.TabIndex = 64;
             this.checkBoxProductBlank.Text = "Любой сортамент";
             this.checkBoxProductBlank.UseVisualStyleBackColor = false;
@@ -265,10 +275,10 @@ namespace CncDataSave.UI
             // 
             this.textBoxOffsetName.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.textBoxOffsetName.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.textBoxOffsetName.Location = new System.Drawing.Point(1087, 123);
+            this.textBoxOffsetName.Location = new System.Drawing.Point(1070, 110);
             this.textBoxOffsetName.Name = "textBoxOffsetName";
             this.textBoxOffsetName.ReadOnly = true;
-            this.textBoxOffsetName.Size = new System.Drawing.Size(224, 22);
+            this.textBoxOffsetName.Size = new System.Drawing.Size(224, 20);
             this.textBoxOffsetName.TabIndex = 65;
             // 
             // textBoxX1
@@ -278,7 +288,7 @@ namespace CncDataSave.UI
             this.textBoxX1.Location = new System.Drawing.Point(943, 191);
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.ReadOnly = true;
-            this.textBoxX1.Size = new System.Drawing.Size(76, 22);
+            this.textBoxX1.Size = new System.Drawing.Size(76, 20);
             this.textBoxX1.TabIndex = 66;
             // 
             // textBoxX2
@@ -288,7 +298,7 @@ namespace CncDataSave.UI
             this.textBoxX2.Location = new System.Drawing.Point(943, 219);
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.ReadOnly = true;
-            this.textBoxX2.Size = new System.Drawing.Size(76, 22);
+            this.textBoxX2.Size = new System.Drawing.Size(76, 20);
             this.textBoxX2.TabIndex = 67;
             // 
             // textBoxX3
@@ -298,7 +308,7 @@ namespace CncDataSave.UI
             this.textBoxX3.Location = new System.Drawing.Point(943, 247);
             this.textBoxX3.Name = "textBoxX3";
             this.textBoxX3.ReadOnly = true;
-            this.textBoxX3.Size = new System.Drawing.Size(76, 22);
+            this.textBoxX3.Size = new System.Drawing.Size(76, 20);
             this.textBoxX3.TabIndex = 68;
             // 
             // textBoxX4
@@ -308,7 +318,7 @@ namespace CncDataSave.UI
             this.textBoxX4.Location = new System.Drawing.Point(943, 275);
             this.textBoxX4.Name = "textBoxX4";
             this.textBoxX4.ReadOnly = true;
-            this.textBoxX4.Size = new System.Drawing.Size(76, 22);
+            this.textBoxX4.Size = new System.Drawing.Size(76, 20);
             this.textBoxX4.TabIndex = 69;
             // 
             // textBoxX5
@@ -318,7 +328,7 @@ namespace CncDataSave.UI
             this.textBoxX5.Location = new System.Drawing.Point(943, 303);
             this.textBoxX5.Name = "textBoxX5";
             this.textBoxX5.ReadOnly = true;
-            this.textBoxX5.Size = new System.Drawing.Size(76, 22);
+            this.textBoxX5.Size = new System.Drawing.Size(76, 20);
             this.textBoxX5.TabIndex = 70;
             // 
             // textBoxX6
@@ -328,7 +338,7 @@ namespace CncDataSave.UI
             this.textBoxX6.Location = new System.Drawing.Point(943, 331);
             this.textBoxX6.Name = "textBoxX6";
             this.textBoxX6.ReadOnly = true;
-            this.textBoxX6.Size = new System.Drawing.Size(76, 22);
+            this.textBoxX6.Size = new System.Drawing.Size(76, 20);
             this.textBoxX6.TabIndex = 71;
             // 
             // textBoxX7
@@ -338,7 +348,7 @@ namespace CncDataSave.UI
             this.textBoxX7.Location = new System.Drawing.Point(943, 359);
             this.textBoxX7.Name = "textBoxX7";
             this.textBoxX7.ReadOnly = true;
-            this.textBoxX7.Size = new System.Drawing.Size(76, 22);
+            this.textBoxX7.Size = new System.Drawing.Size(76, 20);
             this.textBoxX7.TabIndex = 72;
             // 
             // textBoxZ7
@@ -348,7 +358,7 @@ namespace CncDataSave.UI
             this.textBoxZ7.Location = new System.Drawing.Point(1025, 359);
             this.textBoxZ7.Name = "textBoxZ7";
             this.textBoxZ7.ReadOnly = true;
-            this.textBoxZ7.Size = new System.Drawing.Size(76, 22);
+            this.textBoxZ7.Size = new System.Drawing.Size(76, 20);
             this.textBoxZ7.TabIndex = 79;
             // 
             // textBoxZ6
@@ -358,7 +368,7 @@ namespace CncDataSave.UI
             this.textBoxZ6.Location = new System.Drawing.Point(1025, 331);
             this.textBoxZ6.Name = "textBoxZ6";
             this.textBoxZ6.ReadOnly = true;
-            this.textBoxZ6.Size = new System.Drawing.Size(76, 22);
+            this.textBoxZ6.Size = new System.Drawing.Size(76, 20);
             this.textBoxZ6.TabIndex = 78;
             // 
             // textBoxZ5
@@ -368,7 +378,7 @@ namespace CncDataSave.UI
             this.textBoxZ5.Location = new System.Drawing.Point(1025, 303);
             this.textBoxZ5.Name = "textBoxZ5";
             this.textBoxZ5.ReadOnly = true;
-            this.textBoxZ5.Size = new System.Drawing.Size(76, 22);
+            this.textBoxZ5.Size = new System.Drawing.Size(76, 20);
             this.textBoxZ5.TabIndex = 77;
             // 
             // textBoxZ4
@@ -378,7 +388,7 @@ namespace CncDataSave.UI
             this.textBoxZ4.Location = new System.Drawing.Point(1025, 275);
             this.textBoxZ4.Name = "textBoxZ4";
             this.textBoxZ4.ReadOnly = true;
-            this.textBoxZ4.Size = new System.Drawing.Size(76, 22);
+            this.textBoxZ4.Size = new System.Drawing.Size(76, 20);
             this.textBoxZ4.TabIndex = 76;
             // 
             // textBoxZ3
@@ -388,7 +398,7 @@ namespace CncDataSave.UI
             this.textBoxZ3.Location = new System.Drawing.Point(1025, 247);
             this.textBoxZ3.Name = "textBoxZ3";
             this.textBoxZ3.ReadOnly = true;
-            this.textBoxZ3.Size = new System.Drawing.Size(76, 22);
+            this.textBoxZ3.Size = new System.Drawing.Size(76, 20);
             this.textBoxZ3.TabIndex = 75;
             // 
             // textBoxZ2
@@ -398,7 +408,7 @@ namespace CncDataSave.UI
             this.textBoxZ2.Location = new System.Drawing.Point(1025, 219);
             this.textBoxZ2.Name = "textBoxZ2";
             this.textBoxZ2.ReadOnly = true;
-            this.textBoxZ2.Size = new System.Drawing.Size(76, 22);
+            this.textBoxZ2.Size = new System.Drawing.Size(76, 20);
             this.textBoxZ2.TabIndex = 74;
             // 
             // textBoxZ1
@@ -408,7 +418,7 @@ namespace CncDataSave.UI
             this.textBoxZ1.Location = new System.Drawing.Point(1025, 191);
             this.textBoxZ1.Name = "textBoxZ1";
             this.textBoxZ1.ReadOnly = true;
-            this.textBoxZ1.Size = new System.Drawing.Size(76, 22);
+            this.textBoxZ1.Size = new System.Drawing.Size(76, 20);
             this.textBoxZ1.TabIndex = 73;
             // 
             // textBoxY4
@@ -418,7 +428,7 @@ namespace CncDataSave.UI
             this.textBoxY4.Location = new System.Drawing.Point(1142, 274);
             this.textBoxY4.Name = "textBoxY4";
             this.textBoxY4.ReadOnly = true;
-            this.textBoxY4.Size = new System.Drawing.Size(76, 22);
+            this.textBoxY4.Size = new System.Drawing.Size(76, 20);
             this.textBoxY4.TabIndex = 83;
             // 
             // textBoxY3
@@ -428,7 +438,7 @@ namespace CncDataSave.UI
             this.textBoxY3.Location = new System.Drawing.Point(1142, 247);
             this.textBoxY3.Name = "textBoxY3";
             this.textBoxY3.ReadOnly = true;
-            this.textBoxY3.Size = new System.Drawing.Size(76, 22);
+            this.textBoxY3.Size = new System.Drawing.Size(76, 20);
             this.textBoxY3.TabIndex = 82;
             // 
             // textBoxY2
@@ -438,7 +448,7 @@ namespace CncDataSave.UI
             this.textBoxY2.Location = new System.Drawing.Point(1142, 218);
             this.textBoxY2.Name = "textBoxY2";
             this.textBoxY2.ReadOnly = true;
-            this.textBoxY2.Size = new System.Drawing.Size(76, 22);
+            this.textBoxY2.Size = new System.Drawing.Size(76, 20);
             this.textBoxY2.TabIndex = 81;
             // 
             // textBoxY1
@@ -448,7 +458,7 @@ namespace CncDataSave.UI
             this.textBoxY1.Location = new System.Drawing.Point(1142, 190);
             this.textBoxY1.Name = "textBoxY1";
             this.textBoxY1.ReadOnly = true;
-            this.textBoxY1.Size = new System.Drawing.Size(76, 22);
+            this.textBoxY1.Size = new System.Drawing.Size(76, 20);
             this.textBoxY1.TabIndex = 80;
             // 
             // textBoxCannel2X7
@@ -458,7 +468,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2X7.Location = new System.Drawing.Point(943, 634);
             this.textBoxCannel2X7.Name = "textBoxCannel2X7";
             this.textBoxCannel2X7.ReadOnly = true;
-            this.textBoxCannel2X7.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2X7.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2X7.TabIndex = 93;
             // 
             // textBoxCannel2X6
@@ -468,7 +478,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2X6.Location = new System.Drawing.Point(943, 606);
             this.textBoxCannel2X6.Name = "textBoxCannel2X6";
             this.textBoxCannel2X6.ReadOnly = true;
-            this.textBoxCannel2X6.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2X6.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2X6.TabIndex = 92;
             // 
             // textBoxCannel2X5
@@ -478,7 +488,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2X5.Location = new System.Drawing.Point(943, 578);
             this.textBoxCannel2X5.Name = "textBoxCannel2X5";
             this.textBoxCannel2X5.ReadOnly = true;
-            this.textBoxCannel2X5.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2X5.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2X5.TabIndex = 91;
             // 
             // textBoxCannel2X4
@@ -488,7 +498,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2X4.Location = new System.Drawing.Point(943, 550);
             this.textBoxCannel2X4.Name = "textBoxCannel2X4";
             this.textBoxCannel2X4.ReadOnly = true;
-            this.textBoxCannel2X4.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2X4.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2X4.TabIndex = 90;
             // 
             // textBoxCannel2X3
@@ -498,7 +508,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2X3.Location = new System.Drawing.Point(943, 522);
             this.textBoxCannel2X3.Name = "textBoxCannel2X3";
             this.textBoxCannel2X3.ReadOnly = true;
-            this.textBoxCannel2X3.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2X3.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2X3.TabIndex = 89;
             // 
             // textBoxCannel2X2
@@ -508,7 +518,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2X2.Location = new System.Drawing.Point(943, 494);
             this.textBoxCannel2X2.Name = "textBoxCannel2X2";
             this.textBoxCannel2X2.ReadOnly = true;
-            this.textBoxCannel2X2.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2X2.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2X2.TabIndex = 88;
             // 
             // textBoxCannel2X1
@@ -518,7 +528,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2X1.Location = new System.Drawing.Point(943, 466);
             this.textBoxCannel2X1.Name = "textBoxCannel2X1";
             this.textBoxCannel2X1.ReadOnly = true;
-            this.textBoxCannel2X1.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2X1.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2X1.TabIndex = 87;
             // 
             // textBoxCannel2Z7
@@ -528,7 +538,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2Z7.Location = new System.Drawing.Point(1025, 634);
             this.textBoxCannel2Z7.Name = "textBoxCannel2Z7";
             this.textBoxCannel2Z7.ReadOnly = true;
-            this.textBoxCannel2Z7.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2Z7.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2Z7.TabIndex = 100;
             // 
             // textBoxCannel2Z6
@@ -538,7 +548,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2Z6.Location = new System.Drawing.Point(1025, 606);
             this.textBoxCannel2Z6.Name = "textBoxCannel2Z6";
             this.textBoxCannel2Z6.ReadOnly = true;
-            this.textBoxCannel2Z6.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2Z6.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2Z6.TabIndex = 99;
             // 
             // textBoxCannel2Z5
@@ -548,7 +558,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2Z5.Location = new System.Drawing.Point(1025, 578);
             this.textBoxCannel2Z5.Name = "textBoxCannel2Z5";
             this.textBoxCannel2Z5.ReadOnly = true;
-            this.textBoxCannel2Z5.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2Z5.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2Z5.TabIndex = 98;
             // 
             // textBoxCannel2Z4
@@ -558,7 +568,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2Z4.Location = new System.Drawing.Point(1025, 550);
             this.textBoxCannel2Z4.Name = "textBoxCannel2Z4";
             this.textBoxCannel2Z4.ReadOnly = true;
-            this.textBoxCannel2Z4.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2Z4.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2Z4.TabIndex = 97;
             // 
             // textBoxCannel2Z3
@@ -568,7 +578,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2Z3.Location = new System.Drawing.Point(1025, 522);
             this.textBoxCannel2Z3.Name = "textBoxCannel2Z3";
             this.textBoxCannel2Z3.ReadOnly = true;
-            this.textBoxCannel2Z3.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2Z3.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2Z3.TabIndex = 96;
             // 
             // textBoxCannel2Z2
@@ -578,7 +588,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2Z2.Location = new System.Drawing.Point(1025, 494);
             this.textBoxCannel2Z2.Name = "textBoxCannel2Z2";
             this.textBoxCannel2Z2.ReadOnly = true;
-            this.textBoxCannel2Z2.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2Z2.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2Z2.TabIndex = 95;
             // 
             // textBoxCannel2Z1
@@ -588,7 +598,7 @@ namespace CncDataSave.UI
             this.textBoxCannel2Z1.Location = new System.Drawing.Point(1025, 466);
             this.textBoxCannel2Z1.Name = "textBoxCannel2Z1";
             this.textBoxCannel2Z1.ReadOnly = true;
-            this.textBoxCannel2Z1.Size = new System.Drawing.Size(76, 22);
+            this.textBoxCannel2Z1.Size = new System.Drawing.Size(76, 20);
             this.textBoxCannel2Z1.TabIndex = 94;
             // 
             // textBoxZajust
@@ -598,7 +608,7 @@ namespace CncDataSave.UI
             this.textBoxZajust.Location = new System.Drawing.Point(1360, 406);
             this.textBoxZajust.Name = "textBoxZajust";
             this.textBoxZajust.ReadOnly = true;
-            this.textBoxZajust.Size = new System.Drawing.Size(76, 22);
+            this.textBoxZajust.Size = new System.Drawing.Size(76, 20);
             this.textBoxZajust.TabIndex = 104;
             // 
             // textBoxThreadPasses
@@ -608,7 +618,7 @@ namespace CncDataSave.UI
             this.textBoxThreadPasses.Location = new System.Drawing.Point(1360, 378);
             this.textBoxThreadPasses.Name = "textBoxThreadPasses";
             this.textBoxThreadPasses.ReadOnly = true;
-            this.textBoxThreadPasses.Size = new System.Drawing.Size(76, 22);
+            this.textBoxThreadPasses.Size = new System.Drawing.Size(76, 20);
             this.textBoxThreadPasses.TabIndex = 103;
             // 
             // textBoxStandoffSeal
@@ -618,7 +628,7 @@ namespace CncDataSave.UI
             this.textBoxStandoffSeal.Location = new System.Drawing.Point(1360, 350);
             this.textBoxStandoffSeal.Name = "textBoxStandoffSeal";
             this.textBoxStandoffSeal.ReadOnly = true;
-            this.textBoxStandoffSeal.Size = new System.Drawing.Size(76, 22);
+            this.textBoxStandoffSeal.Size = new System.Drawing.Size(76, 20);
             this.textBoxStandoffSeal.TabIndex = 102;
             // 
             // textBoxStandoff
@@ -628,7 +638,7 @@ namespace CncDataSave.UI
             this.textBoxStandoff.Location = new System.Drawing.Point(1360, 322);
             this.textBoxStandoff.Name = "textBoxStandoff";
             this.textBoxStandoff.ReadOnly = true;
-            this.textBoxStandoff.Size = new System.Drawing.Size(76, 22);
+            this.textBoxStandoff.Size = new System.Drawing.Size(76, 20);
             this.textBoxStandoff.TabIndex = 101;
             // 
             // textBoxMachineView
@@ -638,7 +648,7 @@ namespace CncDataSave.UI
             this.textBoxMachineView.Location = new System.Drawing.Point(1354, 250);
             this.textBoxMachineView.Name = "textBoxMachineView";
             this.textBoxMachineView.ReadOnly = true;
-            this.textBoxMachineView.Size = new System.Drawing.Size(76, 22);
+            this.textBoxMachineView.Size = new System.Drawing.Size(76, 20);
             this.textBoxMachineView.TabIndex = 110;
             // 
             // textBoxDiameterView
@@ -648,7 +658,7 @@ namespace CncDataSave.UI
             this.textBoxDiameterView.Location = new System.Drawing.Point(1353, 222);
             this.textBoxDiameterView.Name = "textBoxDiameterView";
             this.textBoxDiameterView.ReadOnly = true;
-            this.textBoxDiameterView.Size = new System.Drawing.Size(76, 22);
+            this.textBoxDiameterView.Size = new System.Drawing.Size(76, 20);
             this.textBoxDiameterView.TabIndex = 109;
             // 
             // textBoxThreadTypeView
@@ -658,7 +668,7 @@ namespace CncDataSave.UI
             this.textBoxThreadTypeView.Location = new System.Drawing.Point(1354, 194);
             this.textBoxThreadTypeView.Name = "textBoxThreadTypeView";
             this.textBoxThreadTypeView.ReadOnly = true;
-            this.textBoxThreadTypeView.Size = new System.Drawing.Size(76, 22);
+            this.textBoxThreadTypeView.Size = new System.Drawing.Size(76, 20);
             this.textBoxThreadTypeView.TabIndex = 108;
             // 
             // textBoxCreationDate
@@ -668,7 +678,7 @@ namespace CncDataSave.UI
             this.textBoxCreationDate.Location = new System.Drawing.Point(1319, 468);
             this.textBoxCreationDate.Name = "textBoxCreationDate";
             this.textBoxCreationDate.ReadOnly = true;
-            this.textBoxCreationDate.Size = new System.Drawing.Size(147, 22);
+            this.textBoxCreationDate.Size = new System.Drawing.Size(147, 20);
             this.textBoxCreationDate.TabIndex = 111;
             // 
             // label20
@@ -679,7 +689,7 @@ namespace CncDataSave.UI
             this.label20.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label20.Location = new System.Drawing.Point(921, 364);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(16, 17);
+            this.label20.Size = new System.Drawing.Size(13, 13);
             this.label20.TabIndex = 118;
             this.label20.Text = "7";
             // 
@@ -691,7 +701,7 @@ namespace CncDataSave.UI
             this.label19.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label19.Location = new System.Drawing.Point(921, 334);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(16, 17);
+            this.label19.Size = new System.Drawing.Size(13, 13);
             this.label19.TabIndex = 117;
             this.label19.Text = "6";
             // 
@@ -703,7 +713,7 @@ namespace CncDataSave.UI
             this.label18.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label18.Location = new System.Drawing.Point(921, 305);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(16, 17);
+            this.label18.Size = new System.Drawing.Size(13, 13);
             this.label18.TabIndex = 116;
             this.label18.Text = "5";
             // 
@@ -715,7 +725,7 @@ namespace CncDataSave.UI
             this.label17.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label17.Location = new System.Drawing.Point(921, 278);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(16, 17);
+            this.label17.Size = new System.Drawing.Size(13, 13);
             this.label17.TabIndex = 115;
             this.label17.Text = "4";
             // 
@@ -727,7 +737,7 @@ namespace CncDataSave.UI
             this.label16.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label16.Location = new System.Drawing.Point(921, 249);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(16, 17);
+            this.label16.Size = new System.Drawing.Size(13, 13);
             this.label16.TabIndex = 114;
             this.label16.Text = "3";
             // 
@@ -739,7 +749,7 @@ namespace CncDataSave.UI
             this.label15.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label15.Location = new System.Drawing.Point(921, 223);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(16, 17);
+            this.label15.Size = new System.Drawing.Size(13, 13);
             this.label15.TabIndex = 113;
             this.label15.Text = "2";
             // 
@@ -751,7 +761,7 @@ namespace CncDataSave.UI
             this.label14.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label14.Location = new System.Drawing.Point(921, 193);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(16, 17);
+            this.label14.Size = new System.Drawing.Size(13, 13);
             this.label14.TabIndex = 112;
             this.label14.Text = "1";
             // 
@@ -763,7 +773,7 @@ namespace CncDataSave.UI
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.Location = new System.Drawing.Point(921, 636);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 17);
+            this.label1.Size = new System.Drawing.Size(13, 13);
             this.label1.TabIndex = 125;
             this.label1.Text = "7";
             // 
@@ -775,7 +785,7 @@ namespace CncDataSave.UI
             this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label2.Location = new System.Drawing.Point(921, 606);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 17);
+            this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 124;
             this.label2.Text = "6";
             // 
@@ -787,7 +797,7 @@ namespace CncDataSave.UI
             this.label3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label3.Location = new System.Drawing.Point(921, 577);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 17);
+            this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 123;
             this.label3.Text = "5";
             // 
@@ -799,7 +809,7 @@ namespace CncDataSave.UI
             this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label4.Location = new System.Drawing.Point(921, 550);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 17);
+            this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 122;
             this.label4.Text = "4";
             // 
@@ -811,7 +821,7 @@ namespace CncDataSave.UI
             this.label8.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label8.Location = new System.Drawing.Point(921, 521);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 17);
+            this.label8.Size = new System.Drawing.Size(13, 13);
             this.label8.TabIndex = 121;
             this.label8.Text = "3";
             // 
@@ -823,7 +833,7 @@ namespace CncDataSave.UI
             this.label9.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label9.Location = new System.Drawing.Point(921, 495);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 17);
+            this.label9.Size = new System.Drawing.Size(13, 13);
             this.label9.TabIndex = 120;
             this.label9.Text = "2";
             // 
@@ -835,7 +845,7 @@ namespace CncDataSave.UI
             this.label10.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label10.Location = new System.Drawing.Point(921, 469);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 17);
+            this.label10.Size = new System.Drawing.Size(13, 13);
             this.label10.TabIndex = 119;
             this.label10.Text = "1";
             // 
@@ -847,7 +857,7 @@ namespace CncDataSave.UI
             this.label21.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label21.Location = new System.Drawing.Point(1120, 279);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(16, 17);
+            this.label21.Size = new System.Drawing.Size(13, 13);
             this.label21.TabIndex = 129;
             this.label21.Text = "4";
             // 
@@ -859,7 +869,7 @@ namespace CncDataSave.UI
             this.label22.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label22.Location = new System.Drawing.Point(1120, 250);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(16, 17);
+            this.label22.Size = new System.Drawing.Size(13, 13);
             this.label22.TabIndex = 128;
             this.label22.Text = "3";
             // 
@@ -871,7 +881,7 @@ namespace CncDataSave.UI
             this.label23.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label23.Location = new System.Drawing.Point(1120, 224);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(16, 17);
+            this.label23.Size = new System.Drawing.Size(13, 13);
             this.label23.TabIndex = 127;
             this.label23.Text = "2";
             // 
@@ -883,22 +893,22 @@ namespace CncDataSave.UI
             this.label24.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label24.Location = new System.Drawing.Point(1120, 194);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(16, 17);
+            this.label24.Size = new System.Drawing.Size(13, 13);
             this.label24.TabIndex = 126;
             this.label24.Text = "1";
             // 
-            // label25
+            // CH1Y
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label25.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label25.Location = new System.Drawing.Point(1094, 155);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(159, 25);
-            this.label25.TabIndex = 136;
-            this.label25.Text = "Первый канал Y";
+            this.CH1Y.AutoSize = true;
+            this.CH1Y.BackColor = System.Drawing.Color.Transparent;
+            this.CH1Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CH1Y.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.CH1Y.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CH1Y.Location = new System.Drawing.Point(1094, 155);
+            this.CH1Y.Name = "CH1Y";
+            this.CH1Y.Size = new System.Drawing.Size(132, 20);
+            this.CH1Y.TabIndex = 136;
+            this.CH1Y.Text = "Первый канал Y";
             // 
             // label26
             // 
@@ -909,35 +919,35 @@ namespace CncDataSave.UI
             this.label26.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label26.Location = new System.Drawing.Point(1252, 287);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(182, 25);
+            this.label26.Size = new System.Drawing.Size(146, 20);
             this.label26.TabIndex = 135;
             this.label26.Text = "Макро параметры";
             // 
-            // label27
+            // labelCH2
             // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label27.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label27.Location = new System.Drawing.Point(908, 424);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(157, 25);
-            this.label27.TabIndex = 134;
-            this.label27.Text = "Второй канал X";
+            this.labelCH2.AutoSize = true;
+            this.labelCH2.BackColor = System.Drawing.Color.Transparent;
+            this.labelCH2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCH2.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.labelCH2.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelCH2.Location = new System.Drawing.Point(908, 424);
+            this.labelCH2.Name = "labelCH2";
+            this.labelCH2.Size = new System.Drawing.Size(129, 20);
+            this.labelCH2.TabIndex = 134;
+            this.labelCH2.Text = "Второй канал X";
             // 
-            // label28
+            // CH1X
             // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label28.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label28.Location = new System.Drawing.Point(905, 155);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(160, 25);
-            this.label28.TabIndex = 133;
-            this.label28.Text = "Первый канал X";
+            this.CH1X.AutoSize = true;
+            this.CH1X.BackColor = System.Drawing.Color.Transparent;
+            this.CH1X.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CH1X.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.CH1X.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CH1X.Location = new System.Drawing.Point(905, 155);
+            this.CH1X.Name = "CH1X";
+            this.CH1X.Size = new System.Drawing.Size(132, 20);
+            this.CH1X.TabIndex = 133;
+            this.CH1X.Text = "Первый канал X";
             // 
             // label29
             // 
@@ -948,7 +958,7 @@ namespace CncDataSave.UI
             this.label29.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label29.Location = new System.Drawing.Point(1316, 155);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(120, 25);
+            this.label29.Size = new System.Drawing.Size(94, 20);
             this.label29.TabIndex = 137;
             this.label29.Text = "Сортамент";
             // 
@@ -958,9 +968,9 @@ namespace CncDataSave.UI
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label30.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label30.Location = new System.Drawing.Point(1259, 196);
+            this.label30.Location = new System.Drawing.Point(1278, 198);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(89, 17);
+            this.label30.Size = new System.Drawing.Size(70, 13);
             this.label30.TabIndex = 140;
             this.label30.Text = "Тип резьбы:";
             // 
@@ -970,9 +980,9 @@ namespace CncDataSave.UI
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label31.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label31.Location = new System.Drawing.Point(1276, 226);
+            this.label31.Location = new System.Drawing.Point(1291, 225);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(71, 17);
+            this.label31.Size = new System.Drawing.Size(56, 13);
             this.label31.TabIndex = 139;
             this.label31.Text = "Диаметр:";
             // 
@@ -982,83 +992,83 @@ namespace CncDataSave.UI
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label32.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label32.Location = new System.Drawing.Point(1289, 255);
+            this.label32.Location = new System.Drawing.Point(1302, 254);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(59, 17);
+            this.label32.Size = new System.Drawing.Size(46, 13);
             this.label32.TabIndex = 138;
             this.label32.Text = "Станок:";
             // 
-            // label33
+            // labelZajust
             // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label33.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label33.Location = new System.Drawing.Point(1208, 406);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(146, 17);
-            this.label33.TabIndex = 144;
-            this.label33.Text = "Корректировка по Z:";
+            this.labelZajust.AutoSize = true;
+            this.labelZajust.BackColor = System.Drawing.Color.Transparent;
+            this.labelZajust.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.labelZajust.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelZajust.Location = new System.Drawing.Point(1241, 409);
+            this.labelZajust.Name = "labelZajust";
+            this.labelZajust.Size = new System.Drawing.Size(113, 13);
+            this.labelZajust.TabIndex = 144;
+            this.labelZajust.Text = "Корректировка по Z:";
             // 
-            // label34
+            // labelThrPass
             // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label34.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label34.Location = new System.Drawing.Point(1199, 377);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(155, 17);
-            this.label34.TabIndex = 143;
-            this.label34.Text = "Количество проходов:";
+            this.labelThrPass.AutoSize = true;
+            this.labelThrPass.BackColor = System.Drawing.Color.Transparent;
+            this.labelThrPass.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.labelThrPass.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelThrPass.Location = new System.Drawing.Point(1235, 381);
+            this.labelThrPass.Name = "labelThrPass";
+            this.labelThrPass.Size = new System.Drawing.Size(119, 13);
+            this.labelThrPass.TabIndex = 143;
+            this.labelThrPass.Text = "Количество проходов:";
             // 
-            // label35
+            // labelStandofOD
             // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label35.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label35.Location = new System.Drawing.Point(1254, 353);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(100, 17);
-            this.label35.TabIndex = 142;
-            this.label35.Text = "Натяг пояска:";
+            this.labelStandofOD.AutoSize = true;
+            this.labelStandofOD.BackColor = System.Drawing.Color.Transparent;
+            this.labelStandofOD.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.labelStandofOD.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelStandofOD.Location = new System.Drawing.Point(1275, 353);
+            this.labelStandofOD.Name = "labelStandofOD";
+            this.labelStandofOD.Size = new System.Drawing.Size(79, 13);
+            this.labelStandofOD.TabIndex = 142;
+            this.labelStandofOD.Text = "Натяг пояска:";
             // 
-            // label36
+            // labelConicity
             // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label36.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label36.Location = new System.Drawing.Point(1266, 325);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(88, 17);
-            this.label36.TabIndex = 141;
-            this.label36.Text = "Конусность:";
+            this.labelConicity.AutoSize = true;
+            this.labelConicity.BackColor = System.Drawing.Color.Transparent;
+            this.labelConicity.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.labelConicity.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelConicity.Location = new System.Drawing.Point(1285, 325);
+            this.labelConicity.Name = "labelConicity";
+            this.labelConicity.Size = new System.Drawing.Size(69, 13);
+            this.labelConicity.TabIndex = 141;
+            this.labelConicity.Text = "Конусность:";
             // 
-            // label37
+            // labelCreated
             // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label37.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label37.Location = new System.Drawing.Point(1201, 471);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(112, 17);
-            this.label37.TabIndex = 145;
-            this.label37.Text = "Дата создания:";
+            this.labelCreated.AutoSize = true;
+            this.labelCreated.BackColor = System.Drawing.Color.Transparent;
+            this.labelCreated.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.labelCreated.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelCreated.Location = new System.Drawing.Point(1226, 471);
+            this.labelCreated.Name = "labelCreated";
+            this.labelCreated.Size = new System.Drawing.Size(87, 13);
+            this.labelCreated.TabIndex = 145;
+            this.labelCreated.Text = "Дата создания:";
             // 
-            // label38
+            // labelUser
             // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label38.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label38.Location = new System.Drawing.Point(1140, 501);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(173, 17);
-            this.label38.TabIndex = 146;
-            this.label38.Text = "Создано пользователем:";
+            this.labelUser.AutoSize = true;
+            this.labelUser.BackColor = System.Drawing.Color.Transparent;
+            this.labelUser.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.labelUser.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelUser.Location = new System.Drawing.Point(1178, 499);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(135, 13);
+            this.labelUser.TabIndex = 146;
+            this.labelUser.Text = "Создано пользователем:";
             // 
             // textBoxCreatedBy
             // 
@@ -1067,7 +1077,7 @@ namespace CncDataSave.UI
             this.textBoxCreatedBy.Location = new System.Drawing.Point(1319, 496);
             this.textBoxCreatedBy.Name = "textBoxCreatedBy";
             this.textBoxCreatedBy.ReadOnly = true;
-            this.textBoxCreatedBy.Size = new System.Drawing.Size(190, 22);
+            this.textBoxCreatedBy.Size = new System.Drawing.Size(190, 20);
             this.textBoxCreatedBy.TabIndex = 147;
             // 
             // label39
@@ -1076,9 +1086,9 @@ namespace CncDataSave.UI
             this.label39.BackColor = System.Drawing.Color.Transparent;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label39.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label39.Location = new System.Drawing.Point(956, 9);
+            this.label39.Location = new System.Drawing.Point(989, 19);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(467, 55);
+            this.label39.Size = new System.Drawing.Size(365, 44);
             this.label39.TabIndex = 148;
             this.label39.Text = "Просмотр оффсета";
             this.label39.UseMnemonic = false;
@@ -1089,25 +1099,25 @@ namespace CncDataSave.UI
             this.label40.BackColor = System.Drawing.Color.Transparent;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label40.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label40.Location = new System.Drawing.Point(156, 8);
+            this.label40.Location = new System.Drawing.Point(209, 19);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(453, 55);
+            this.label40.Size = new System.Drawing.Size(355, 44);
             this.label40.TabIndex = 149;
             this.label40.Text = "Параметры поиска";
             this.label40.UseMnemonic = false;
             // 
-            // label41
+            // labelResult
             // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label41.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label41.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label41.Location = new System.Drawing.Point(95, 268);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(179, 25);
-            this.label41.TabIndex = 150;
-            this.label41.Text = "Результат поиска";
+            this.labelResult.AutoSize = true;
+            this.labelResult.BackColor = System.Drawing.Color.Transparent;
+            this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelResult.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.labelResult.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelResult.Location = new System.Drawing.Point(95, 268);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(145, 20);
+            this.labelResult.TabIndex = 150;
+            this.labelResult.Text = "Результат поиска";
             // 
             // textBoxCommentView
             // 
@@ -1128,7 +1138,7 @@ namespace CncDataSave.UI
             this.label11.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label11.Location = new System.Drawing.Point(1118, 544);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(146, 25);
+            this.label11.Size = new System.Drawing.Size(113, 20);
             this.label11.TabIndex = 152;
             this.label11.Text = "Комментарий";
             // 
@@ -1139,9 +1149,9 @@ namespace CncDataSave.UI
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label12.Location = new System.Drawing.Point(1104, 97);
+            this.label12.Location = new System.Drawing.Point(1108, 87);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(190, 25);
+            this.label12.Size = new System.Drawing.Size(152, 20);
             this.label12.TabIndex = 153;
             this.label12.Text = "Имя в базе данных";
             // 
@@ -1184,7 +1194,7 @@ namespace CncDataSave.UI
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox5.Location = new System.Drawing.Point(1174, 315);
+            this.pictureBox5.Location = new System.Drawing.Point(1174, 310);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(270, 120);
             this.pictureBox5.TabIndex = 158;
@@ -1199,6 +1209,16 @@ namespace CncDataSave.UI
             this.pictureBox6.TabIndex = 159;
             this.pictureBox6.TabStop = false;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox7.Location = new System.Drawing.Point(164, 66);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(464, 176);
+            this.pictureBox7.TabIndex = 160;
+            this.pictureBox7.TabStop = false;
+            // 
             // ViewOffset
             // 
             this.AutoSize = true;
@@ -1207,24 +1227,24 @@ namespace CncDataSave.UI
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBoxCommentView);
-            this.Controls.Add(this.label41);
+            this.Controls.Add(this.labelResult);
             this.Controls.Add(this.label40);
             this.Controls.Add(this.label39);
             this.Controls.Add(this.textBoxCreatedBy);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label36);
+            this.Controls.Add(this.labelUser);
+            this.Controls.Add(this.labelCreated);
+            this.Controls.Add(this.labelZajust);
+            this.Controls.Add(this.labelThrPass);
+            this.Controls.Add(this.labelStandofOD);
+            this.Controls.Add(this.labelConicity);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label29);
-            this.Controls.Add(this.label25);
+            this.Controls.Add(this.CH1Y);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.label28);
+            this.Controls.Add(this.labelCH2);
+            this.Controls.Add(this.CH1X);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label23);
@@ -1289,9 +1309,9 @@ namespace CncDataSave.UI
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.checkBoxPickAllTime);
             this.Controls.Add(this.dateTimePickerForView);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.laberThrType);
+            this.Controls.Add(this.labelDiameter);
+            this.Controls.Add(this.labelMachine);
             this.Controls.Add(this.comboBoxMachineNumberView);
             this.Controls.Add(this.comboBoxProductDiameterView);
             this.Controls.Add(this.comboBoxThreadTypeView);
@@ -1301,6 +1321,7 @@ namespace CncDataSave.UI
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ViewOffset";
             this.Load += new System.EventHandler(this.ViewOffset_Load);
@@ -1310,6 +1331,7 @@ namespace CncDataSave.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1317,9 +1339,9 @@ namespace CncDataSave.UI
 
         #endregion
 
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label laberThrType;
+        private System.Windows.Forms.Label labelDiameter;
+        private System.Windows.Forms.Label labelMachine;
         private System.Windows.Forms.ComboBox comboBoxMachineNumberView;
         private System.Windows.Forms.ComboBox comboBoxProductDiameterView;
         private System.Windows.Forms.ComboBox comboBoxThreadTypeView;
@@ -1387,24 +1409,24 @@ namespace CncDataSave.UI
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label CH1Y;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label labelCH2;
+        private System.Windows.Forms.Label CH1X;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label labelZajust;
+        private System.Windows.Forms.Label labelThrPass;
+        private System.Windows.Forms.Label labelStandofOD;
+        private System.Windows.Forms.Label labelConicity;
+        private System.Windows.Forms.Label labelCreated;
+        private System.Windows.Forms.Label labelUser;
         private System.Windows.Forms.TextBox textBoxCreatedBy;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label labelResult;
         private System.Windows.Forms.TextBox textBoxCommentView;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -1414,5 +1436,6 @@ namespace CncDataSave.UI
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

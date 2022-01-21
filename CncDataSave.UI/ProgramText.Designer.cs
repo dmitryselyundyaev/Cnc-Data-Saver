@@ -130,7 +130,8 @@ namespace CncDataSave.UI
             // 
             // CleanButton
             // 
-            this.CleanButton.Location = new System.Drawing.Point(1099, 728);
+            this.CleanButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CleanButton.Location = new System.Drawing.Point(1099, 704);
             this.CleanButton.Name = "CleanButton";
             this.CleanButton.Size = new System.Drawing.Size(152, 26);
             this.CleanButton.TabIndex = 2;
@@ -146,7 +147,7 @@ namespace CncDataSave.UI
             this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label4.Location = new System.Drawing.Point(40, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 25);
+            this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 50;
             this.label4.Text = "Каталог";
             // 
@@ -158,7 +159,7 @@ namespace CncDataSave.UI
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.Location = new System.Drawing.Point(585, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 25);
+            this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 51;
             this.label1.Text = "Содержание";
             // 

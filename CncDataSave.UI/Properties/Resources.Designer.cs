@@ -61,17 +61,22 @@ namespace CncDataSave.UI.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на G01
-        ///G01
-        ///G01
-        ///G01
-        ///G01
-        ///G01
-        ///G01
-        ///G01
-        ///G01
-        ///G01
-        ///G01G01G01G01G01.
+        ///   Ищет локализованную строку, похожую на N60 X-20                                 ;Point 7
+        ///N65 XN60 X-20                                 ;Point 7
+        ///N65 X-10 Y-25                            ;Point 8
+        ///N70 X-30 Y-15                            ;Point 9
+        ///N80 X0 Y-40                              ;Point 10
+        ///N85 G40 G90 X-20 Y-20                    ;Point 11
+        ///N90 G00 Z50
+        ///N95 Y100
+        ///N100 M30
+        ///N5 G00 G54 G64 G90 G17 X-20 Y-20 Z50     ;Point 1
+        ///N10 S450 M03 F250 D01 (12.5 MM DIA)
+        ///N15 C0
+        ///N20 Z5
+        ///N25 G01 Z0
+        ///N30 Z-5
+        ///N35 G42 G91 X20 Y20                       [остаток строки не уместился]&quot;;.
         /// </summary>
         public static string BTCCalculation {
             get {
@@ -116,6 +121,16 @@ namespace CncDataSave.UI.Properties {
         public static string BTCProcess {
             get {
                 return ResourceManager.GetString("BTCProcess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap premium_icon_user_4548538 {
+            get {
+                object obj = ResourceManager.GetObject("premium-icon-user-4548538", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

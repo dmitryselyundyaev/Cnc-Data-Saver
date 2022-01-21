@@ -1,5 +1,7 @@
 ﻿
+using System;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace CncDataSave.UI
 {
@@ -34,18 +36,18 @@ namespace CncDataSave.UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panelMainChild = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LoginLabel = new System.Windows.Forms.Label();
+            this.LabelPassword = new System.Windows.Forms.Label();
+            this.labelUserName = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordCheckBox = new System.Windows.Forms.TextBox();
             this.LoginTextBox = new System.Windows.Forms.TextBox();
+            this.ButtonUserNext = new System.Windows.Forms.Button();
             this.buttonStopApp = new System.Windows.Forms.Button();
             this.ViewOffset = new System.Windows.Forms.Button();
             this.AddOffset = new System.Windows.Forms.Button();
             this.AxisCheck = new System.Windows.Forms.Button();
             this.DefProgram = new System.Windows.Forms.Button();
-            this.ButtonUserNext = new System.Windows.Forms.Button();
-            this.LoginLabel = new System.Windows.Forms.Label();
             this.panelMainChild.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,8 +61,8 @@ namespace CncDataSave.UI
             this.panelMainChild.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelMainChild.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelMainChild.Controls.Add(this.LoginLabel);
-            this.panelMainChild.Controls.Add(this.label2);
-            this.panelMainChild.Controls.Add(this.label1);
+            this.panelMainChild.Controls.Add(this.LabelPassword);
+            this.panelMainChild.Controls.Add(this.labelUserName);
             this.panelMainChild.Controls.Add(this.LoginButton);
             this.panelMainChild.Controls.Add(this.PasswordCheckBox);
             this.panelMainChild.Controls.Add(this.LoginTextBox);
@@ -69,23 +71,31 @@ namespace CncDataSave.UI
             this.panelMainChild.Size = new System.Drawing.Size(1570, 813);
             this.panelMainChild.TabIndex = 1;
             // 
-            // label2
+            // LoginLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Пароль";
+            this.LoginLabel.AutoSize = true;
+            this.LoginLabel.Location = new System.Drawing.Point(115, 100);
+            this.LoginLabel.Name = "LoginLabel";
+            this.LoginLabel.Size = new System.Drawing.Size(0, 13);
+            this.LoginLabel.TabIndex = 5;
             // 
-            // label1
+            // LabelPassword
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Имя пользователя";
+            this.LabelPassword.AutoSize = true;
+            this.LabelPassword.Location = new System.Drawing.Point(35, 56);
+            this.LabelPassword.Name = "LabelPassword";
+            this.LabelPassword.Size = new System.Drawing.Size(45, 13);
+            this.LabelPassword.TabIndex = 4;
+            this.LabelPassword.Text = "Пароль";
+            // 
+            // labelUserName
+            // 
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.Location = new System.Drawing.Point(35, 11);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(103, 13);
+            this.labelUserName.TabIndex = 3;
+            this.labelUserName.Text = "Имя пользователя";
             // 
             // LoginButton
             // 
@@ -102,15 +112,41 @@ namespace CncDataSave.UI
             this.PasswordCheckBox.Location = new System.Drawing.Point(57, 75);
             this.PasswordCheckBox.Name = "PasswordCheckBox";
             this.PasswordCheckBox.PasswordChar = '*';
-            this.PasswordCheckBox.Size = new System.Drawing.Size(146, 22);
+            this.PasswordCheckBox.Size = new System.Drawing.Size(146, 20);
             this.PasswordCheckBox.TabIndex = 1;
+            this.PasswordCheckBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnterKeyPress);
             // 
             // LoginTextBox
             // 
             this.LoginTextBox.Location = new System.Drawing.Point(57, 31);
             this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(146, 22);
+            this.LoginTextBox.Size = new System.Drawing.Size(146, 20);
             this.LoginTextBox.TabIndex = 0;
+            // 
+            // ButtonUserNext
+            // 
+            this.ButtonUserNext.AccessibleDescription = "";
+            this.ButtonUserNext.AccessibleName = "";
+            this.ButtonUserNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonUserNext.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonUserNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ButtonUserNext.FlatAppearance.BorderSize = 0;
+            this.ButtonUserNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.ButtonUserNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.ButtonUserNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ButtonUserNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonUserNext.ImageKey = "(отсутствует)";
+            this.ButtonUserNext.Location = new System.Drawing.Point(1407, 2);
+            this.ButtonUserNext.Margin = new System.Windows.Forms.Padding(0);
+            this.ButtonUserNext.Name = "ButtonUserNext";
+            this.ButtonUserNext.Size = new System.Drawing.Size(135, 30);
+            this.ButtonUserNext.TabIndex = 8;
+            this.ButtonUserNext.Tag = "";
+            this.ButtonUserNext.Text = "Сменить пользователя";
+            this.ButtonUserNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonUserNext.UseVisualStyleBackColor = false;
+            this.ButtonUserNext.Visible = false;
+            this.ButtonUserNext.Click += new System.EventHandler(this.ButtonUserNext_Click);
             // 
             // buttonStopApp
             // 
@@ -119,12 +155,12 @@ namespace CncDataSave.UI
             this.buttonStopApp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonStopApp.BackgroundImage")));
             this.buttonStopApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonStopApp.FlatAppearance.BorderSize = 0;
-            this.buttonStopApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonStopApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonStopApp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGray;
+            this.buttonStopApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.buttonStopApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStopApp.Location = new System.Drawing.Point(1545, 1);
             this.buttonStopApp.Name = "buttonStopApp";
-            this.buttonStopApp.Size = new System.Drawing.Size(29, 30);
+            this.buttonStopApp.Size = new System.Drawing.Size(30, 30);
             this.buttonStopApp.TabIndex = 2;
             this.buttonStopApp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonStopApp.UseVisualStyleBackColor = false;
@@ -183,26 +219,6 @@ namespace CncDataSave.UI
             this.DefProgram.UseVisualStyleBackColor = false;
             this.DefProgram.Click += new System.EventHandler(this.DefProgram_Click);
             // 
-            // ButtonUserNext
-            // 
-            this.ButtonUserNext.BackColor = System.Drawing.Color.Silver;
-            this.ButtonUserNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ButtonUserNext.Location = new System.Drawing.Point(848, 5);
-            this.ButtonUserNext.Name = "ButtonUserNext";
-            this.ButtonUserNext.Size = new System.Drawing.Size(205, 26);
-            this.ButtonUserNext.TabIndex = 8;
-            this.ButtonUserNext.Text = "Сменить пользователя";
-            this.ButtonUserNext.UseVisualStyleBackColor = false;
-            this.ButtonUserNext.Click += new System.EventHandler(this.ButtonUserNext_Click);
-            // 
-            // LoginLabel
-            // 
-            this.LoginLabel.AutoSize = true;
-            this.LoginLabel.Location = new System.Drawing.Point(115, 100);
-            this.LoginLabel.Name = "LoginLabel";
-            this.LoginLabel.Size = new System.Drawing.Size(0, 17);
-            this.LoginLabel.TabIndex = 5;
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -216,19 +232,30 @@ namespace CncDataSave.UI
             this.Controls.Add(this.buttonStopApp);
             this.Controls.Add(this.panelMainChild);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "CNCDataSaver";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panelMainChild.ResumeLayout(false);
             this.panelMainChild.PerformLayout();
             this.ResumeLayout(false);
 
         }
+
+        private void CheckEnterKeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+
+            {
+                LoginButton_Click(sender, e);
+            }
+        }
+
 
         #endregion
         private System.Windows.Forms.ColorDialog colorDialog1;
@@ -239,8 +266,8 @@ namespace CncDataSave.UI
         private System.Windows.Forms.Button DefProgram;
         private System.Windows.Forms.TextBox PasswordCheckBox;
         private System.Windows.Forms.TextBox LoginTextBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LabelPassword;
+        private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button ButtonUserNext;
         private System.Windows.Forms.Label LoginLabel;
