@@ -1,14 +1,9 @@
-﻿using CncDataSave.UI.Properties;
-using CncDataSaver.BL.Model;
+﻿using CncDataSaver.BL.Model;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CncDataSave.UI
@@ -183,11 +178,20 @@ namespace CncDataSave.UI
 
         }
 
-        private void listBoxViewDataList_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Event for listbox clicking.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ListBoxViewDataList_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBoxViewDataList.Click += ListBoxViewDataList_Click;
         }
-
+        /// <summary>
+        /// Result of clicking event.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListBoxViewDataList_Click(object sender, EventArgs e)
         {
             set.Load();

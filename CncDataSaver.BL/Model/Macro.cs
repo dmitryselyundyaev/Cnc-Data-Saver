@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CncDataSaver.BL.Model
 {
@@ -20,7 +16,7 @@ namespace CncDataSaver.BL.Model
 
         public override string ToString()
         {
-            return $"";
+            return $"{MacroId}";
         }
     }
 }

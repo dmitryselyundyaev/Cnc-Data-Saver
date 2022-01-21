@@ -1,12 +1,5 @@
 ﻿using CncDataSave.UI.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CncDataSave.UI
@@ -18,7 +11,7 @@ namespace CncDataSave.UI
             InitializeComponent();
         }
 
-        private void treeViewListOfPrograms_AfterSelect(object sender, TreeViewEventArgs e)
+        private void TreeViewListOfPrograms_AfterSelect(object sender, TreeViewEventArgs e)
         {
             treeViewListOfPrograms.Click += TreeViewListOfPrograms_Click;
             

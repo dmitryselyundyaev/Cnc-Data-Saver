@@ -258,7 +258,7 @@ namespace CncDataSave.UI
             this.listBoxViewDataList.Name = "listBoxViewDataList";
             this.listBoxViewDataList.Size = new System.Drawing.Size(609, 381);
             this.listBoxViewDataList.TabIndex = 63;
-            this.listBoxViewDataList.SelectedIndexChanged += new System.EventHandler(this.listBoxViewDataList_SelectedIndexChanged);
+            this.listBoxViewDataList.SelectedIndexChanged += new System.EventHandler(this.ListBoxViewDataList_SelectedIndexChanged);
             // 
             // checkBoxProductBlank
             // 

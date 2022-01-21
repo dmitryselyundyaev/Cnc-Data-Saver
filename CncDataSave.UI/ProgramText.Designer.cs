@@ -116,7 +116,7 @@ namespace CncDataSave.UI
             treeNode18});
             this.treeViewListOfPrograms.Size = new System.Drawing.Size(368, 496);
             this.treeViewListOfPrograms.TabIndex = 0;
-            this.treeViewListOfPrograms.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewListOfPrograms_AfterSelect);
+            this.treeViewListOfPrograms.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeViewListOfPrograms_AfterSelect);
             // 
             // textBoxProgramView
             // 

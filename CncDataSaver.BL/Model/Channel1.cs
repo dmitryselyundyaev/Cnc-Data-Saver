@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CncDataSaver.BL.Model
 {
@@ -30,7 +26,7 @@ namespace CncDataSaver.BL.Model
         public decimal? Y4 { get; set; }
         public override string ToString()
         {
-            return $"";
+            return $"{Channel1Id}";
         }
     }
 }

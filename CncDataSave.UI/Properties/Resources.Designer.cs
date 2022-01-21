@@ -123,15 +123,5 @@ namespace CncDataSave.UI.Properties {
                 return ResourceManager.GetString("BTCProcess", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap premium_icon_user_4548538 {
-            get {
-                object obj = ResourceManager.GetObject("premium-icon-user-4548538", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

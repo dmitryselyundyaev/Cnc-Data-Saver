@@ -4,7 +4,6 @@ using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using CncDataSaver.BL;
 
 namespace CncDataSave.UI
 {
@@ -28,7 +27,9 @@ namespace CncDataSave.UI
         {
 
         }
-
+        /// <summary>
+        /// Default colours for combobox.
+        /// </summary>
         private void OffsetComboBoxTextColourDef()
         {
             comboBoxThreadType.BackColor = Color.Gray;

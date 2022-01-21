@@ -1,14 +1,9 @@
 ﻿using CncDataSaver.BL.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CncDataSaver.BL;
 
 
 
@@ -16,8 +11,15 @@ namespace CncDataSave.UI
 {
     public partial class Main : Form
     {
+
         readonly CncDataSaverContext db;
+        /// <summary>
+        /// Mouse position.
+        /// </summary>
         private const int WM_NCHITTEST = 0x84;
+        /// <summary>
+        /// Window position.
+        /// </summary>
         private const int HT_CAPTION = 0x2;
         public Main()
         {
@@ -30,6 +32,10 @@ namespace CncDataSave.UI
             DefProgram.Enabled = false;
             
         }
+        /// <summary>
+        /// Method to make non frame for moving.
+        /// </summary>
+        /// <param name="m"></param>
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
@@ -44,6 +50,7 @@ namespace CncDataSave.UI
             this.WindowState = FormWindowState.Normal;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            //Tips for close button and next user button.
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(ButtonUserNext, "Сменить пользователя");
             toolTip.SetToolTip(buttonStopApp, "Закрыть приложени");
@@ -72,12 +79,19 @@ namespace CncDataSave.UI
             childForm.BringToFront();
             childForm.Show();
         }
-
+        /// <summary>
+        /// App stop button.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonStopApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
             
         }
+        /// <summary>
+        /// Method for button default colors.
+        /// </summary>
         private void MainButtonColour()
         {
             if(activeForm != null)
@@ -88,6 +102,9 @@ namespace CncDataSave.UI
                 DefProgram.BackColor = Color.Silver;
             }
         }
+        /// <summary>
+        /// Method for enable main buttons.
+        /// </summary>
         private void MainButtonEnabled()
         {
 
@@ -96,6 +113,11 @@ namespace CncDataSave.UI
             AxisCheck.Enabled = true;
             DefProgram.Enabled = true;
         }
+        /// <summary>
+        /// Offset update form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddOffset_Click(object sender, EventArgs e)
         {
             MainButtonColour();
@@ -105,7 +127,11 @@ namespace CncDataSave.UI
             AddOffset.Enabled = false;
             AddOffset.BackColor = Color.Gray;
         }
-
+        /// <summary>
+        /// Offset view form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ViewOffset_Click(object sender, EventArgs e)
         {
             MainButtonColour();
@@ -115,7 +141,11 @@ namespace CncDataSave.UI
             ViewOffset.Enabled = false;
             ViewOffset.BackColor = Color.Gray;
         }
-
+        /// <summary>
+        /// Axis wear check form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AxisCheck_Click(object sender, EventArgs e)
         {
             MainButtonColour();
@@ -125,7 +155,11 @@ namespace CncDataSave.UI
             AxisCheck.Enabled = false;
             AxisCheck.BackColor = Color.Gray;
         }
-
+        /// <summary>
+        /// CNC default programs form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DefProgram_Click(object sender, EventArgs e)
         {
             MainButtonColour();
@@ -135,7 +169,11 @@ namespace CncDataSave.UI
             DefProgram.Enabled = false;
             DefProgram.BackColor = Color.Gray;
         }
-
+        /// <summary>
+        /// Close current session.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonUserNext_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Введите данные нового пользователя", "Смена пользователя",
@@ -143,7 +181,11 @@ namespace CncDataSave.UI
             Application.Restart();
 
         }
-
+        /// <summary>
+        /// Login button for authorization.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoginButton_Click(object sender, EventArgs e)
         {
             var currentUserLogin = db.Users.Any(u => u.UserName == LoginTextBox.Text);

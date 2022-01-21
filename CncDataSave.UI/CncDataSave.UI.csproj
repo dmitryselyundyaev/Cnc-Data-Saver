@@ -145,9 +145,6 @@
   <ItemGroup>
     <None Include="Resources\BTCProcess.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\premium-icon-user-4548538.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
