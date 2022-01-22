@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CncDataSaver.BL", "CncDataS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CncDataSave.UI", "CncDataSave.UI\CncDataSave.UI.csproj", "{EB9637BB-0397-478E-8A6A-16C86F0328CA}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Installer", "Installer\Installer.vdproj", "{BB45031B-C83D-4198-9A57-D2ABD677D01D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{EB9637BB-0397-478E-8A6A-16C86F0328CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB9637BB-0397-478E-8A6A-16C86F0328CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB9637BB-0397-478E-8A6A-16C86F0328CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB45031B-C83D-4198-9A57-D2ABD677D01D}.Debug|Any CPU.ActiveCfg = Debug
+		{BB45031B-C83D-4198-9A57-D2ABD677D01D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -69,6 +69,7 @@ namespace CncDataSave.UI
             // 
             // treeViewListOfPrograms
             // 
+            this.treeViewListOfPrograms.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.treeViewListOfPrograms.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.treeViewListOfPrograms.Location = new System.Drawing.Point(45, 89);
             this.treeViewListOfPrograms.Name = "treeViewListOfPrograms";
@@ -120,6 +121,7 @@ namespace CncDataSave.UI
             // 
             // textBoxProgramView
             // 
+            this.textBoxProgramView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxProgramView.Location = new System.Drawing.Point(579, 31);
             this.textBoxProgramView.Multiline = true;
             this.textBoxProgramView.Name = "textBoxProgramView";
@@ -130,6 +132,7 @@ namespace CncDataSave.UI
             // 
             // CleanButton
             // 
+            this.CleanButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CleanButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CleanButton.Location = new System.Drawing.Point(1099, 704);
             this.CleanButton.Name = "CleanButton";
@@ -141,25 +144,27 @@ namespace CncDataSave.UI
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label4.Location = new System.Drawing.Point(40, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
+            this.label4.Size = new System.Drawing.Size(87, 25);
             this.label4.TabIndex = 50;
             this.label4.Text = "Каталог";
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.label1.Location = new System.Drawing.Point(585, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.Size = new System.Drawing.Size(130, 25);
             this.label1.TabIndex = 51;
             this.label1.Text = "Содержание";
             // 

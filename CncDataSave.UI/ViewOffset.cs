@@ -34,6 +34,7 @@ namespace CncDataSave.UI
         /// <param name="e"></param>
         private void SearchButton_Click(object sender, EventArgs e)
         {
+            var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
             if (checkBoxProductBlank.Checked)
             {
                 
@@ -65,7 +66,6 @@ namespace CncDataSave.UI
                     }
                     else if(string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && !string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
                     {
-                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData.Where(u => u.Product.Diameter == convertedDiameter).OrderByDescending(u => u.OffsetDataId).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
                     }
@@ -76,7 +76,6 @@ namespace CncDataSave.UI
                     }
                     else if(!string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && !string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
                     {
-                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData.Where(u => u.Product.Diameter == convertedDiameter)
                             .Where(u => u.Product.ThreadType == comboBoxThreadTypeView.Text).OrderByDescending(u => u.OffsetDataId).ToList();
                         listBoxViewDataList.DataSource = new BindingList<OffsetData>(source);
@@ -90,7 +89,6 @@ namespace CncDataSave.UI
                     }
                     else if (string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && !string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && !string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
                     {
-                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData
                             .Where(u => u.Machine == comboBoxMachineNumberView.Text)
                             .Where(u => u.Product.Diameter == convertedDiameter).OrderByDescending(u => u.OffsetDataId).ToList();
@@ -98,7 +96,6 @@ namespace CncDataSave.UI
                     }
                     else
                     {
-                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData
                             .Where(u => u.Product.ThreadType == comboBoxThreadTypeView.Text)
                             .Where(u => u.Machine == comboBoxMachineNumberView.Text)
@@ -119,7 +116,6 @@ namespace CncDataSave.UI
                     }
                     else if (string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && !string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
                     {
-                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData
                             .Where(u => u.Product.Diameter == convertedDiameter)
                             .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date)
@@ -136,7 +132,6 @@ namespace CncDataSave.UI
                     }
                     else if (!string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && !string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
                     {
-                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData.Where(u => u.Product.Diameter == convertedDiameter)
                             .Where(u => u.Product.ThreadType == comboBoxThreadTypeView.Text)
                             .Where(u => DbFunctions.TruncateTime(u.Created) == dateTimePickerForView.Value.Date)
@@ -154,7 +149,6 @@ namespace CncDataSave.UI
                     }
                     else if (string.IsNullOrEmpty(comboBoxThreadTypeView.Text) && !string.IsNullOrEmpty(comboBoxProductDiameterView.Text) && !string.IsNullOrEmpty(comboBoxMachineNumberView.Text))
                     {
-                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData
                             .Where(u => u.Machine == comboBoxMachineNumberView.Text)
                             .Where(u => u.Product.Diameter == convertedDiameter)
@@ -164,7 +158,6 @@ namespace CncDataSave.UI
                     }
                     else
                     {
-                        var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
                         var source = db.OffsetData
                             .Where(u=> u.Product.ThreadType == comboBoxThreadTypeView.Text)
                             .Where(u => u.Machine == comboBoxMachineNumberView.Text)

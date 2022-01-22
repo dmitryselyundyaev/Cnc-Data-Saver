@@ -41,13 +41,13 @@ namespace CncDataSave.UI
             this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordCheckBox = new System.Windows.Forms.TextBox();
             this.LoginTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ButtonUserNext = new System.Windows.Forms.Button();
             this.buttonStopApp = new System.Windows.Forms.Button();
             this.ViewOffset = new System.Windows.Forms.Button();
             this.AddOffset = new System.Windows.Forms.Button();
             this.AxisCheck = new System.Windows.Forms.Button();
             this.DefProgram = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMainChild.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,34 +75,41 @@ namespace CncDataSave.UI
             // 
             // LoginLabel
             // 
+            this.LoginLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LoginLabel.AutoSize = true;
-            this.LoginLabel.Location = new System.Drawing.Point(102, 110);
+            this.LoginLabel.Location = new System.Drawing.Point(774, 349);
             this.LoginLabel.Name = "LoginLabel";
-            this.LoginLabel.Size = new System.Drawing.Size(0, 13);
+            this.LoginLabel.Size = new System.Drawing.Size(0, 17);
             this.LoginLabel.TabIndex = 5;
+            this.LoginLabel.Click += new System.EventHandler(this.LoginLabel_Click);
             // 
             // LabelPassword
             // 
+            this.LabelPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LabelPassword.AutoSize = true;
-            this.LabelPassword.Location = new System.Drawing.Point(17, 68);
+            this.LabelPassword.Location = new System.Drawing.Point(689, 307);
             this.LabelPassword.Name = "LabelPassword";
-            this.LabelPassword.Size = new System.Drawing.Size(45, 13);
+            this.LabelPassword.Size = new System.Drawing.Size(57, 17);
             this.LabelPassword.TabIndex = 4;
             this.LabelPassword.Text = "Пароль";
+            this.LabelPassword.Click += new System.EventHandler(this.LabelPassword_Click);
             // 
             // labelUserName
             // 
+            this.labelUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelUserName.AutoSize = true;
-            this.labelUserName.Location = new System.Drawing.Point(17, 23);
+            this.labelUserName.Location = new System.Drawing.Point(689, 262);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(103, 13);
+            this.labelUserName.Size = new System.Drawing.Size(131, 17);
             this.labelUserName.TabIndex = 3;
             this.labelUserName.Text = "Имя пользователя";
+            this.labelUserName.Click += new System.EventHandler(this.labelUserName_Click);
             // 
             // LoginButton
             // 
+            this.LoginButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LoginButton.Location = new System.Drawing.Point(105, 126);
+            this.LoginButton.Location = new System.Drawing.Point(777, 365);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(89, 25);
             this.LoginButton.TabIndex = 2;
@@ -112,19 +119,34 @@ namespace CncDataSave.UI
             // 
             // PasswordCheckBox
             // 
-            this.PasswordCheckBox.Location = new System.Drawing.Point(39, 87);
+            this.PasswordCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PasswordCheckBox.Location = new System.Drawing.Point(711, 326);
             this.PasswordCheckBox.Name = "PasswordCheckBox";
             this.PasswordCheckBox.PasswordChar = '*';
-            this.PasswordCheckBox.Size = new System.Drawing.Size(146, 20);
+            this.PasswordCheckBox.Size = new System.Drawing.Size(146, 22);
             this.PasswordCheckBox.TabIndex = 1;
+            this.PasswordCheckBox.TextChanged += new System.EventHandler(this.PasswordCheckBox_TextChanged);
             this.PasswordCheckBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnterKeyPress);
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.Location = new System.Drawing.Point(39, 43);
+            this.LoginTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LoginTextBox.Location = new System.Drawing.Point(711, 282);
             this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(146, 20);
+            this.LoginTextBox.Size = new System.Drawing.Size(146, 22);
             this.LoginTextBox.TabIndex = 0;
+            this.LoginTextBox.TextChanged += new System.EventHandler(this.LoginTextBox_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Location = new System.Drawing.Point(562, 172);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(440, 303);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ButtonUserNext
             // 
@@ -221,15 +243,6 @@ namespace CncDataSave.UI
             this.DefProgram.Text = "Исходные программы";
             this.DefProgram.UseVisualStyleBackColor = false;
             this.DefProgram.Click += new System.EventHandler(this.DefProgram_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(227, 167);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // Main
             // 

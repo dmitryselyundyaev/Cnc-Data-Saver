@@ -30,6 +30,7 @@ namespace CncDataSave.UI
             ViewOffset.Enabled = false;
             AxisCheck.Enabled = false;
             DefProgram.Enabled = false;
+
             
         }
         /// <summary>
@@ -206,6 +207,34 @@ namespace CncDataSave.UI
             }
         }
 
+        private void LabelPassword_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void labelUserName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordCheckBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
