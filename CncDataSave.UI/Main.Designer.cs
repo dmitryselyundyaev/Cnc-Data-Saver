@@ -81,29 +81,28 @@ namespace CncDataSave.UI
             this.LoginLabel.Name = "LoginLabel";
             this.LoginLabel.Size = new System.Drawing.Size(0, 17);
             this.LoginLabel.TabIndex = 5;
-            this.LoginLabel.Click += new System.EventHandler(this.LoginLabel_Click);
             // 
             // LabelPassword
             // 
             this.LabelPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LabelPassword.AutoSize = true;
-            this.LabelPassword.Location = new System.Drawing.Point(689, 307);
+            this.LabelPassword.Location = new System.Drawing.Point(689, 290);
             this.LabelPassword.Name = "LabelPassword";
             this.LabelPassword.Size = new System.Drawing.Size(57, 17);
             this.LabelPassword.TabIndex = 4;
             this.LabelPassword.Text = "Пароль";
-            this.LabelPassword.Click += new System.EventHandler(this.LabelPassword_Click);
+
             // 
             // labelUserName
             // 
             this.labelUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelUserName.AutoSize = true;
-            this.labelUserName.Location = new System.Drawing.Point(689, 262);
+            this.labelUserName.Location = new System.Drawing.Point(689, 221);
             this.labelUserName.Name = "labelUserName";
             this.labelUserName.Size = new System.Drawing.Size(131, 17);
             this.labelUserName.TabIndex = 3;
             this.labelUserName.Text = "Имя пользователя";
-            this.labelUserName.Click += new System.EventHandler(this.labelUserName_Click);
+
             // 
             // LoginButton
             // 
@@ -120,33 +119,33 @@ namespace CncDataSave.UI
             // PasswordCheckBox
             // 
             this.PasswordCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PasswordCheckBox.Location = new System.Drawing.Point(711, 326);
+            this.PasswordCheckBox.Location = new System.Drawing.Point(711, 310);
             this.PasswordCheckBox.Name = "PasswordCheckBox";
             this.PasswordCheckBox.PasswordChar = '*';
             this.PasswordCheckBox.Size = new System.Drawing.Size(146, 22);
             this.PasswordCheckBox.TabIndex = 1;
-            this.PasswordCheckBox.TextChanged += new System.EventHandler(this.PasswordCheckBox_TextChanged);
+
             this.PasswordCheckBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckEnterKeyPress);
             // 
             // LoginTextBox
             // 
             this.LoginTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LoginTextBox.Location = new System.Drawing.Point(711, 282);
+            this.LoginTextBox.Location = new System.Drawing.Point(711, 241);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(146, 22);
             this.LoginTextBox.TabIndex = 0;
-            this.LoginTextBox.TextChanged += new System.EventHandler(this.LoginTextBox_TextChanged);
+
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(562, 172);
+            this.pictureBox1.Location = new System.Drawing.Point(571, 175);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(440, 303);
+            this.pictureBox1.Size = new System.Drawing.Size(429, 289);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+
             // 
             // ButtonUserNext
             // 

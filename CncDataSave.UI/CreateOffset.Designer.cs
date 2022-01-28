@@ -142,6 +142,7 @@ namespace CncDataSave.UI
             this.comboBoxThreadType.Name = "comboBoxThreadType";
             this.comboBoxThreadType.Size = new System.Drawing.Size(121, 24);
             this.comboBoxThreadType.TabIndex = 43;
+            this.comboBoxThreadType.SelectedIndexChanged += new System.EventHandler(this.comboBoxThreadType_SelectedIndexChanged);
             // 
             // comboBoxProductDiameter
             // 
@@ -160,6 +161,7 @@ namespace CncDataSave.UI
             this.comboBoxProductDiameter.Name = "comboBoxProductDiameter";
             this.comboBoxProductDiameter.Size = new System.Drawing.Size(121, 24);
             this.comboBoxProductDiameter.TabIndex = 44;
+            this.comboBoxProductDiameter.SelectedIndexChanged += new System.EventHandler(this.comboBoxProductDiameter_SelectedIndexChanged);
             // 
             // SaveOffsetToDB
             // 
@@ -187,6 +189,7 @@ namespace CncDataSave.UI
             this.label1.TabIndex = 46;
             this.label1.Text = "Введите оффсет ";
             this.label1.UseMnemonic = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -200,6 +203,7 @@ namespace CncDataSave.UI
             this.label2.Size = new System.Drawing.Size(160, 25);
             this.label2.TabIndex = 47;
             this.label2.Text = "Первый канал X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -213,6 +217,7 @@ namespace CncDataSave.UI
             this.label3.Size = new System.Drawing.Size(157, 25);
             this.label3.TabIndex = 48;
             this.label3.Text = "Второй канал X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -226,6 +231,7 @@ namespace CncDataSave.UI
             this.label4.Size = new System.Drawing.Size(182, 25);
             this.label4.TabIndex = 49;
             this.label4.Text = "Макро параметры";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // comboBoxMachineNumber
             // 
@@ -242,6 +248,7 @@ namespace CncDataSave.UI
             this.comboBoxMachineNumber.Name = "comboBoxMachineNumber";
             this.comboBoxMachineNumber.Size = new System.Drawing.Size(121, 24);
             this.comboBoxMachineNumber.TabIndex = 50;
+            this.comboBoxMachineNumber.SelectedIndexChanged += new System.EventHandler(this.comboBoxMachineNumber_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -254,6 +261,7 @@ namespace CncDataSave.UI
             this.label5.Size = new System.Drawing.Size(59, 17);
             this.label5.TabIndex = 51;
             this.label5.Text = "Станок:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -266,6 +274,7 @@ namespace CncDataSave.UI
             this.label6.Size = new System.Drawing.Size(71, 17);
             this.label6.TabIndex = 52;
             this.label6.Text = "Диаметр:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -278,6 +287,7 @@ namespace CncDataSave.UI
             this.label7.Size = new System.Drawing.Size(89, 17);
             this.label7.TabIndex = 53;
             this.label7.Text = "Тип резьбы:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // maskedTextBoxX1
             // 
@@ -291,6 +301,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxX1.TabIndex = 54;
             this.maskedTextBoxX1.Text = "000000";
             this.maskedTextBoxX1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxX1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxX1_MaskInputRejected);
             // 
             // maskedTextBoxZ1
             // 
@@ -304,6 +315,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxZ1.TabIndex = 55;
             this.maskedTextBoxZ1.Text = "000000";
             this.maskedTextBoxZ1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxZ1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxZ1_MaskInputRejected);
             // 
             // maskedTextBoxX2
             // 
@@ -317,6 +329,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxX2.TabIndex = 56;
             this.maskedTextBoxX2.Text = "000000";
             this.maskedTextBoxX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxX2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxX2_MaskInputRejected);
             // 
             // maskedTextBoxZ2
             // 
@@ -330,6 +343,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxZ2.TabIndex = 57;
             this.maskedTextBoxZ2.Text = "000000";
             this.maskedTextBoxZ2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxZ2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxZ2_MaskInputRejected);
             // 
             // maskedTextBoxX3
             // 
@@ -343,6 +357,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxX3.TabIndex = 58;
             this.maskedTextBoxX3.Text = "000000";
             this.maskedTextBoxX3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxX3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxX3_MaskInputRejected);
             // 
             // maskedTextBoxZ3
             // 
@@ -356,6 +371,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxZ3.TabIndex = 59;
             this.maskedTextBoxZ3.Text = "000000";
             this.maskedTextBoxZ3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxZ3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxZ3_MaskInputRejected);
             // 
             // maskedTextBoxX4
             // 
@@ -369,6 +385,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxX4.TabIndex = 60;
             this.maskedTextBoxX4.Text = "000000";
             this.maskedTextBoxX4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxX4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxX4_MaskInputRejected);
             // 
             // maskedTextBoxZ4
             // 
@@ -382,6 +399,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxZ4.TabIndex = 61;
             this.maskedTextBoxZ4.Text = "000000";
             this.maskedTextBoxZ4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxZ4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxZ4_MaskInputRejected);
             // 
             // maskedTextBoxX5
             // 
@@ -395,6 +413,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxX5.TabIndex = 62;
             this.maskedTextBoxX5.Text = "000000";
             this.maskedTextBoxX5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxX5.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxX5_MaskInputRejected);
             // 
             // maskedTextBoxZ5
             // 
@@ -408,6 +427,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxZ5.TabIndex = 63;
             this.maskedTextBoxZ5.Text = "000000";
             this.maskedTextBoxZ5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxZ5.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxZ5_MaskInputRejected);
             // 
             // maskedTextBoxX6
             // 
@@ -421,6 +441,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxX6.TabIndex = 64;
             this.maskedTextBoxX6.Text = "000000";
             this.maskedTextBoxX6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxX6.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxX6_MaskInputRejected);
             // 
             // maskedTextBoxZ6
             // 
@@ -434,6 +455,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxZ6.TabIndex = 65;
             this.maskedTextBoxZ6.Text = "000000";
             this.maskedTextBoxZ6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxZ6.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxZ6_MaskInputRejected);
             // 
             // maskedTextBoxX7
             // 
@@ -447,6 +469,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxX7.TabIndex = 66;
             this.maskedTextBoxX7.Text = "000000";
             this.maskedTextBoxX7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxX7.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxX7_MaskInputRejected);
             // 
             // maskedTextBoxZ7
             // 
@@ -460,6 +483,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxZ7.TabIndex = 67;
             this.maskedTextBoxZ7.Text = "000000";
             this.maskedTextBoxZ7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxZ7.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxZ7_MaskInputRejected);
             // 
             // maskedTextBoxY1
             // 
@@ -473,6 +497,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxY1.TabIndex = 68;
             this.maskedTextBoxY1.Text = "000000";
             this.maskedTextBoxY1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxY1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxY1_MaskInputRejected);
             // 
             // maskedTextBoxY2
             // 
@@ -486,6 +511,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxY2.TabIndex = 69;
             this.maskedTextBoxY2.Text = "000000";
             this.maskedTextBoxY2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxY2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxY2_MaskInputRejected);
             // 
             // maskedTextBoxY3
             // 
@@ -499,6 +525,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxY3.TabIndex = 70;
             this.maskedTextBoxY3.Text = "000000";
             this.maskedTextBoxY3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxY3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxY3_MaskInputRejected);
             // 
             // maskedTextBoxY4
             // 
@@ -512,6 +539,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxY4.TabIndex = 71;
             this.maskedTextBoxY4.Text = "000000";
             this.maskedTextBoxY4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxY4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxY4_MaskInputRejected);
             // 
             // label8
             // 
@@ -525,6 +553,7 @@ namespace CncDataSave.UI
             this.label8.Size = new System.Drawing.Size(159, 25);
             this.label8.TabIndex = 74;
             this.label8.Text = "Первый канал Y";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // maskedTextBoxCH2Z7
             // 
@@ -538,6 +567,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2Z7.TabIndex = 88;
             this.maskedTextBoxCH2Z7.Text = "000000";
             this.maskedTextBoxCH2Z7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2Z7.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2Z7_MaskInputRejected);
             // 
             // maskedTextBoxCH2X7
             // 
@@ -551,6 +581,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2X7.TabIndex = 87;
             this.maskedTextBoxCH2X7.Text = "000000";
             this.maskedTextBoxCH2X7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2X7.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2X7_MaskInputRejected);
             // 
             // maskedTextBoxCH2Z6
             // 
@@ -564,6 +595,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2Z6.TabIndex = 86;
             this.maskedTextBoxCH2Z6.Text = "000000";
             this.maskedTextBoxCH2Z6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2Z6.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2Z6_MaskInputRejected);
             // 
             // maskedTextBoxCH2X6
             // 
@@ -577,6 +609,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2X6.TabIndex = 85;
             this.maskedTextBoxCH2X6.Text = "000000";
             this.maskedTextBoxCH2X6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2X6.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2X6_MaskInputRejected);
             // 
             // maskedTextBoxCH2Z5
             // 
@@ -590,6 +623,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2Z5.TabIndex = 84;
             this.maskedTextBoxCH2Z5.Text = "000000";
             this.maskedTextBoxCH2Z5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2Z5.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2Z5_MaskInputRejected);
             // 
             // maskedTextBoxCH2X5
             // 
@@ -603,6 +637,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2X5.TabIndex = 83;
             this.maskedTextBoxCH2X5.Text = "000000";
             this.maskedTextBoxCH2X5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2X5.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2X5_MaskInputRejected);
             // 
             // maskedTextBoxCH2Z4
             // 
@@ -616,6 +651,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2Z4.TabIndex = 82;
             this.maskedTextBoxCH2Z4.Text = "000000";
             this.maskedTextBoxCH2Z4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2Z4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2Z4_MaskInputRejected);
             // 
             // maskedTextBoxCH2X4
             // 
@@ -629,6 +665,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2X4.TabIndex = 81;
             this.maskedTextBoxCH2X4.Text = "000000";
             this.maskedTextBoxCH2X4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2X4.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2X4_MaskInputRejected);
             // 
             // maskedTextBoxCH2Z3
             // 
@@ -642,6 +679,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2Z3.TabIndex = 80;
             this.maskedTextBoxCH2Z3.Text = "000000";
             this.maskedTextBoxCH2Z3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2Z3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2Z3_MaskInputRejected);
             // 
             // maskedTextBoxCH2X3
             // 
@@ -655,6 +693,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2X3.TabIndex = 79;
             this.maskedTextBoxCH2X3.Text = "000000";
             this.maskedTextBoxCH2X3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2X3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2X3_MaskInputRejected);
             // 
             // maskedTextBoxCH2Z2
             // 
@@ -668,6 +707,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2Z2.TabIndex = 78;
             this.maskedTextBoxCH2Z2.Text = "000000";
             this.maskedTextBoxCH2Z2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2Z2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2Z2_MaskInputRejected);
             // 
             // maskedTextBoxCH2X2
             // 
@@ -681,6 +721,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2X2.TabIndex = 77;
             this.maskedTextBoxCH2X2.Text = "000000";
             this.maskedTextBoxCH2X2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2X2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2X2_MaskInputRejected);
             // 
             // maskedTextBoxCH2Z1
             // 
@@ -694,6 +735,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2Z1.TabIndex = 76;
             this.maskedTextBoxCH2Z1.Text = "000000";
             this.maskedTextBoxCH2Z1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2Z1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2Z1_MaskInputRejected);
             // 
             // maskedTextBoxCH2X1
             // 
@@ -707,6 +749,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxCH2X1.TabIndex = 75;
             this.maskedTextBoxCH2X1.Text = "000000";
             this.maskedTextBoxCH2X1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxCH2X1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxCH2X1_MaskInputRejected);
             // 
             // maskedTextBoxZajust
             // 
@@ -720,6 +763,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxZajust.TabIndex = 93;
             this.maskedTextBoxZajust.Text = "000000";
             this.maskedTextBoxZajust.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxZajust.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxZajust_MaskInputRejected);
             // 
             // maskedTextBoxThrPass
             // 
@@ -733,6 +777,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxThrPass.TabIndex = 92;
             this.maskedTextBoxThrPass.Text = "1";
             this.maskedTextBoxThrPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxThrPass.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxThrPass_MaskInputRejected);
             // 
             // maskedTextBoxSealStandoff
             // 
@@ -746,6 +791,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxSealStandoff.TabIndex = 91;
             this.maskedTextBoxSealStandoff.Text = "000000";
             this.maskedTextBoxSealStandoff.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxSealStandoff.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxSealStandoff_MaskInputRejected);
             // 
             // maskedTextBoxStandoff
             // 
@@ -759,6 +805,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxStandoff.TabIndex = 90;
             this.maskedTextBoxStandoff.Text = "000000";
             this.maskedTextBoxStandoff.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxStandoff.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxStandoff_MaskInputRejected);
             // 
             // maskedTextBoxConicity
             // 
@@ -772,6 +819,7 @@ namespace CncDataSave.UI
             this.maskedTextBoxConicity.TabIndex = 89;
             this.maskedTextBoxConicity.Text = "000000";
             this.maskedTextBoxConicity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maskedTextBoxConicity.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxConicity_MaskInputRejected);
             // 
             // label9
             // 
@@ -784,6 +832,7 @@ namespace CncDataSave.UI
             this.label9.Size = new System.Drawing.Size(88, 17);
             this.label9.TabIndex = 97;
             this.label9.Text = "Конусность:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -796,6 +845,7 @@ namespace CncDataSave.UI
             this.label10.Size = new System.Drawing.Size(50, 17);
             this.label10.TabIndex = 98;
             this.label10.Text = "Натяг:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -808,6 +858,7 @@ namespace CncDataSave.UI
             this.label11.Size = new System.Drawing.Size(100, 17);
             this.label11.TabIndex = 99;
             this.label11.Text = "Натяг пояска:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -820,6 +871,7 @@ namespace CncDataSave.UI
             this.label12.Size = new System.Drawing.Size(155, 17);
             this.label12.TabIndex = 100;
             this.label12.Text = "Количество проходов:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -832,6 +884,7 @@ namespace CncDataSave.UI
             this.label13.Size = new System.Drawing.Size(146, 17);
             this.label13.TabIndex = 101;
             this.label13.Text = "Корректировка по Z:";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -844,6 +897,7 @@ namespace CncDataSave.UI
             this.label14.Size = new System.Drawing.Size(16, 17);
             this.label14.TabIndex = 102;
             this.label14.Text = "1";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
             // 
@@ -856,6 +910,7 @@ namespace CncDataSave.UI
             this.label15.Size = new System.Drawing.Size(16, 17);
             this.label15.TabIndex = 103;
             this.label15.Text = "2";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
@@ -868,6 +923,7 @@ namespace CncDataSave.UI
             this.label16.Size = new System.Drawing.Size(16, 17);
             this.label16.TabIndex = 104;
             this.label16.Text = "3";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 
@@ -880,6 +936,7 @@ namespace CncDataSave.UI
             this.label17.Size = new System.Drawing.Size(16, 17);
             this.label17.TabIndex = 105;
             this.label17.Text = "4";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -892,6 +949,7 @@ namespace CncDataSave.UI
             this.label18.Size = new System.Drawing.Size(16, 17);
             this.label18.TabIndex = 106;
             this.label18.Text = "5";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label19
             // 
@@ -904,6 +962,7 @@ namespace CncDataSave.UI
             this.label19.Size = new System.Drawing.Size(16, 17);
             this.label19.TabIndex = 107;
             this.label19.Text = "6";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
@@ -916,6 +975,7 @@ namespace CncDataSave.UI
             this.label20.Size = new System.Drawing.Size(16, 17);
             this.label20.TabIndex = 108;
             this.label20.Text = "7";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label24
             // 
@@ -928,6 +988,7 @@ namespace CncDataSave.UI
             this.label24.Size = new System.Drawing.Size(16, 17);
             this.label24.TabIndex = 112;
             this.label24.Text = "4";
+            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // label25
             // 
@@ -940,6 +1001,7 @@ namespace CncDataSave.UI
             this.label25.Size = new System.Drawing.Size(16, 17);
             this.label25.TabIndex = 111;
             this.label25.Text = "3";
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // label26
             // 
@@ -952,6 +1014,7 @@ namespace CncDataSave.UI
             this.label26.Size = new System.Drawing.Size(16, 17);
             this.label26.TabIndex = 110;
             this.label26.Text = "2";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // label27
             // 
@@ -964,6 +1027,7 @@ namespace CncDataSave.UI
             this.label27.Size = new System.Drawing.Size(16, 17);
             this.label27.TabIndex = 109;
             this.label27.Text = "1";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // label28
             // 
@@ -976,6 +1040,7 @@ namespace CncDataSave.UI
             this.label28.Size = new System.Drawing.Size(16, 17);
             this.label28.TabIndex = 122;
             this.label28.Text = "7";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label29
             // 
@@ -988,6 +1053,7 @@ namespace CncDataSave.UI
             this.label29.Size = new System.Drawing.Size(16, 17);
             this.label29.TabIndex = 121;
             this.label29.Text = "6";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label30
             // 
@@ -1000,6 +1066,7 @@ namespace CncDataSave.UI
             this.label30.Size = new System.Drawing.Size(16, 17);
             this.label30.TabIndex = 120;
             this.label30.Text = "5";
+            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // label31
             // 
@@ -1012,6 +1079,7 @@ namespace CncDataSave.UI
             this.label31.Size = new System.Drawing.Size(16, 17);
             this.label31.TabIndex = 119;
             this.label31.Text = "4";
+            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // label32
             // 
@@ -1024,6 +1092,7 @@ namespace CncDataSave.UI
             this.label32.Size = new System.Drawing.Size(16, 17);
             this.label32.TabIndex = 118;
             this.label32.Text = "3";
+            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // label33
             // 
@@ -1036,6 +1105,7 @@ namespace CncDataSave.UI
             this.label33.Size = new System.Drawing.Size(16, 17);
             this.label33.TabIndex = 117;
             this.label33.Text = "2";
+            this.label33.Click += new System.EventHandler(this.label33_Click);
             // 
             // label34
             // 
@@ -1048,6 +1118,7 @@ namespace CncDataSave.UI
             this.label34.Size = new System.Drawing.Size(16, 17);
             this.label34.TabIndex = 116;
             this.label34.Text = "1";
+            this.label34.Click += new System.EventHandler(this.label34_Click);
             // 
             // label21
             // 
@@ -1060,6 +1131,7 @@ namespace CncDataSave.UI
             this.label21.Size = new System.Drawing.Size(17, 17);
             this.label21.TabIndex = 123;
             this.label21.Text = "X";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label35
             // 
@@ -1072,6 +1144,7 @@ namespace CncDataSave.UI
             this.label35.Size = new System.Drawing.Size(17, 17);
             this.label35.TabIndex = 124;
             this.label35.Text = "X";
+            this.label35.Click += new System.EventHandler(this.label35_Click);
             // 
             // label36
             // 
@@ -1084,6 +1157,7 @@ namespace CncDataSave.UI
             this.label36.Size = new System.Drawing.Size(17, 17);
             this.label36.TabIndex = 125;
             this.label36.Text = "Z";
+            this.label36.Click += new System.EventHandler(this.label36_Click);
             // 
             // label37
             // 
@@ -1096,6 +1170,7 @@ namespace CncDataSave.UI
             this.label37.Size = new System.Drawing.Size(17, 17);
             this.label37.TabIndex = 126;
             this.label37.Text = "Z";
+            this.label37.Click += new System.EventHandler(this.label37_Click);
             // 
             // label38
             // 
@@ -1108,6 +1183,7 @@ namespace CncDataSave.UI
             this.label38.Size = new System.Drawing.Size(17, 17);
             this.label38.TabIndex = 127;
             this.label38.Text = "Y";
+            this.label38.Click += new System.EventHandler(this.label38_Click);
             // 
             // label22
             // 
@@ -1121,6 +1197,7 @@ namespace CncDataSave.UI
             this.label22.Size = new System.Drawing.Size(120, 25);
             this.label22.TabIndex = 128;
             this.label22.Text = "Сортамент";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // labelIsSaved
             // 
@@ -1134,6 +1211,7 @@ namespace CncDataSave.UI
             this.labelIsSaved.TabIndex = 129;
             this.labelIsSaved.Text = "Параметры записаны";
             this.labelIsSaved.Visible = false;
+            this.labelIsSaved.Click += new System.EventHandler(this.labelIsSaved_Click);
             // 
             // textBoxComment
             // 
@@ -1143,6 +1221,7 @@ namespace CncDataSave.UI
             this.textBoxComment.Name = "textBoxComment";
             this.textBoxComment.Size = new System.Drawing.Size(413, 123);
             this.textBoxComment.TabIndex = 130;
+            this.textBoxComment.TextChanged += new System.EventHandler(this.textBoxComment_TextChanged);
             // 
             // label23
             // 
@@ -1156,6 +1235,7 @@ namespace CncDataSave.UI
             this.label23.Size = new System.Drawing.Size(146, 25);
             this.label23.TabIndex = 131;
             this.label23.Text = "Комментарий";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // pictureBox1
             // 
@@ -1166,6 +1246,7 @@ namespace CncDataSave.UI
             this.pictureBox1.Size = new System.Drawing.Size(182, 282);
             this.pictureBox1.TabIndex = 132;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -1176,6 +1257,7 @@ namespace CncDataSave.UI
             this.pictureBox2.Size = new System.Drawing.Size(121, 174);
             this.pictureBox2.TabIndex = 133;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -1186,6 +1268,7 @@ namespace CncDataSave.UI
             this.pictureBox3.Size = new System.Drawing.Size(182, 282);
             this.pictureBox3.TabIndex = 134;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -1196,6 +1279,7 @@ namespace CncDataSave.UI
             this.pictureBox4.Size = new System.Drawing.Size(258, 235);
             this.pictureBox4.TabIndex = 135;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -1206,6 +1290,7 @@ namespace CncDataSave.UI
             this.pictureBox5.Size = new System.Drawing.Size(250, 142);
             this.pictureBox5.TabIndex = 136;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // CreateOffset
             // 

@@ -34,7 +34,12 @@ namespace CncDataSave.UI
         /// <param name="e"></param>
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            var convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
+            int convertedDiameter = 0;
+            if (!string.IsNullOrEmpty(comboBoxProductDiameterView.Text))
+            {
+                convertedDiameter = Convert.ToInt32(comboBoxProductDiameterView.Text);
+            }
+
             if (checkBoxProductBlank.Checked)
             {
                 
@@ -201,7 +206,6 @@ namespace CncDataSave.UI
             textBoxZajust.Text = string.Format("{0:N4}", selectedOffset.Macro.Zajust);
             textBoxCommentView.Text = selectedOffset.Comment.ToString();
             #region X's and Z's 
-
             textBoxX1.Text = string.Format("{0:N4}", selectedOffset.Channel1.X1);
             textBoxX2.Text = string.Format("{0:N4}", selectedOffset.Channel1.X2);
             textBoxX3.Text = string.Format("{0:N4}", selectedOffset.Channel1.X3);

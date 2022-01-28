@@ -11,7 +11,7 @@ namespace CncDataSaver.BL.Model
         public string UserPassword { get; set; }
         public override string ToString()
         {
-            return $"{UserName} ";
+            return $"{UserName}";
         }
     }
 }

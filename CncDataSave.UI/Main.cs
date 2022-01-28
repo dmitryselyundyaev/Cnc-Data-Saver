@@ -17,6 +17,7 @@ namespace CncDataSave.UI
         /// Mouse position.
         /// </summary>
         private const int WM_NCHITTEST = 0x84;
+        public string CurrentUserUserName { get; set; }
         /// <summary>
         /// Window position.
         /// </summary>
@@ -193,6 +194,7 @@ namespace CncDataSave.UI
             var currentUserPassword = db.Users.Where(u => u.UserName == LoginTextBox.Text).Any(u => u.UserPassword == PasswordCheckBox.Text);
             if (currentUserLogin && currentUserPassword)
             {
+                CurrentUserUserName = currentUserLogin.ToString();
                 MainButtonEnabled();
                 LoginLabel.Text = "Вход успешный";
                 LoginButton.Hide();
@@ -205,36 +207,6 @@ namespace CncDataSave.UI
             {
                 LoginLabel.Text = "Не верные данные";
             }
-        }
-
-        private void LabelPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelUserName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PasswordCheckBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
